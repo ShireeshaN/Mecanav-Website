@@ -1,506 +1,340 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Contact Us</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favourite-icon.png">
 
-<title>Downloads</title>
-<link rel="shortcut icon" href="assets/images/logo/favourite-icon.png">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-		<!-- CSS Dependencies -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/fontawesome-all.css">
-<link rel="stylesheet" href="assets/css/icomoon.css">
-<link rel="stylesheet" href="assets/css/animate.css">
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assets/css/jquery-ui.css">
-<link rel="stylesheet" href="assets/css/aos.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- FIXED: Only one updated Font Awesome version -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Bootstrap & AOS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+    }
+    .breadcrumb-nev i {
+      margin-right: 5px;
+    }
+    .contact-box {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .form-control, .form-control:focus {
+      background-color: #2c2c2c;
+      color: white;
+      border-color: #444;
+    }
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2c2c2c;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .social-icons a:hover {
+      background-color: white;
+      transform: scale(1.1);
+    }
+    .social-icons a:hover .fab {
+      color: inherit;
+    }
+
+    .faq-container {
+      background-color: #181818;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    .accordion-item {
+      border-bottom: 1px solid #333;
+    }
+    .accordion-button {
+      background-color: transparent;
+      color: white;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-button::after {
+      content: none;
+    }
+    .accordion-icon {
+      font-size: 1.2rem;
+      margin-left: auto;
+    }
+    .accordion-body {
+      background-color: #2a2a2a;
+      color: #ccc;
+      padding: 16px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      border: none;
+    }
+  </style>
 </head>
 
-<body class="flex flex-col min-h-screen">
-
-
-		<!-- backtotop - start -->
-		<div id="thetop"></div>
-		<div id="backtotop">
-			<a href="#" id="scroll">
-				<i class="far fa-arrow-up"></i>
-			</a>
-		</div>
-		<!-- backtotop - end -->
-
-		<!-- preloader - start -->
-		<div id="preloader"></div>
-		<!-- preloader - end -->
-
-
-	 <!-- header-section - start
-		================================================== -->
-    <header id="header-section" class="header-section sticky-header clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-2">
-                    <div class="brand-logo">
-                        <a href="index.html">
-								<img src="assets/images/logo/facadelogos.png" alt="logo_not_found">
-							</a>
-                        <div class="mobile-menu-btns float-right ul-li-right">
-                            <ul class="clearfix">
-                                <li>
-                                    <button type="button" class="menu-btn">
-											<span></span>
-											<span></span>
-											<span></span>
-										</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-10">
-                    <nav class="main-menu ul-li-right clearfix">
-                        <ul class="clearfix">
-                            <li class="menu-item">
-                                <a href="index.html" class="">HOME</a>
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="About.html" class="active">ABOUT US</a>
-                            </li>
-
-                            <li class="menu-item-has-child">
-                                <a href="product.html">PRODUCTS</a>
-                                <ul class="submenu">
-										<li><a href="Pixel-LED-Strip-Product.html">Pixel LED Strip</a></li>
-									<li><a href="Neon-Flex-LED-Product.html">Neon flex LED</a></li>
-									<li><a href="Pixel-LED-Bars-Product.html">Pixel LED bars</a></li>
-									<li><a href="Pixel-LED-Panel-Product.html">Pixel LED panel</a></li>
-									<li><a href="Pixel-Dot-Lights-Product.html">Pixel dot lights</a></li>
-									<li><a href="Wall-Washers-Lights-Product.html">Wall Washers lights</a></li>
-									<li><a href="Pillar-Highlighters-Product.html">Pillar highlighters</a></li>
-                  	<li><a href="Fan-Projection-Lights-Product.html">Fan Projection Lights</a></li>
-									<li><a href="Wall-Window-lights-Product.html">Wall window lights</a></li>
-									<li><a href="Gobo-Lights-Product.html">Gobo lights</a></li>
-									<li><a href="Pool-Lights-Product.html">Pool lights</a></li>
-									<li><a href="Fountain-Lights-Product.html">Fountain lights</a></li>
-									<li><a href="Recessed-Ground-Lights-Product.html">Recessed ground lights</a></li>
-									<li><a href="Tree-Highlighters-Product.html">Tree highlighters</a></li>
-									<li><a href="Flood-Lights-Product.html">Flood lights</a></li>
-									<li><a href="DMX-Controllers-Product.html">DMX controllers</a></li>
-									<li><a href="Drivers-Product.html">Drivers</a></li>
-									</ul>		
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="Applications.html">APPLICATIONS</a>
-
-                            </li>
-
-                            <li class="menu-item-has-child">
-                                <a href="#">SERVICES</a>
-                                <ul class="submenu">
-                                    <li><a href="Catalogues.html">Catalogues</a></li>
-                                    <li><a href="Downloads.html">Downloads</a></li>
-                                    <li><a href="Solutions.html">Solutions</a></li>
-                                    <li><a href="Projects.html">Projects</a></li>
-                                </ul>
-                            </li>
-                           
-                            <li class="menu-item">
-                                <a href="Contact.html">CONTACT US</a>
-
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <div class="sidebar-menu-wrapper">
-        <div id="sidebar-menu" class="sidebar-menu">
-            <span class="close-btn"><i class="fal fa-times"></i></span>
-
-            <div id="menu-list" class="menu-list ul-li-block clearfix">
-                <ul class="clearfix">
-                    <li class="menu-item-has-child">
-                        <a href="index.html">HOME</a>
-                    </li>
-
-                    <li>
-                        <a href="About.html" class="active">ABOUT US</a>
-
-                    </li>
-
-                    <li>
-                        <a href="#" data-toggle="collapse" aria-expanded="false">PRODUCTS</a>
-                        <ul class="submenu collapse" id="pages-submenu" data-parent="#menu-list">
-                          	<li><a href="Pixel-LED-Strip-Product.html">Pixel LED Strip</a></li>
-									<li><a href="Neon-Flex-LED-Product.html">Neon flex LED</a></li>
-									<li><a href="Pixel-LED-Bars-Product.html">Pixel LED bars</a></li>
-									<li><a href="Pixel-LED-Panel-Product.html">Pixel LED panel</a></li>
-									<li><a href="Pixel-Dot-Lights-Product.html">Pixel dot lights</a></li>
-									<li><a href="Wall-Washers-Lights-Product.html">Wall Washers lights</a></li>
-									<li><a href="Pillar-Highlighters-Product.html">Pillar highlighters</a></li>
-                  	<li><a href="Fan-Projection-Lights-Product.html">Fan Projection Lights</a></li>
-									<li><a href="Wall-Window-lights-Product.html">Wall window lights</a></li>
-									<li><a href="Gobo-Lights-Product.html">Gobo lights</a></li>
-									<li><a href="Pool-Lights-Product.html">Pool lights</a></li>
-									<li><a href="Fountain-Lights-Product.html">Fountain lights</a></li>
-									<li><a href="Recessed-Ground-Lights-Product.html">Recessed ground lights</a></li>
-									<li><a href="Tree-Highlighters-Product.html">Tree highlighters</a></li>
-									<li><a href="Flood-Lights-Product.html">Flood lights</a></li>
-									<li><a href="DMX-Controllers-Product.html">DMX controllers</a></li>
-									<li><a href="Drivers-Product.html">Drivers</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="Applications.html">APPLICATIONS</a>
-                    </li>
-
-                    <li>
-                        <a href="Services.html">SERVICES</a>
-                        <ul class="submenu collapse" id="pages-submenu" data-parent="#menu-list">
-                            <li><a href="Catalogues.html">Catalogues</a></li>
-                            <li><a href="Downloads.html">Downloads</a></li>
-                            <li><a href="Solutions.html">Solutions</a></li>
-                            <li><a href="Projects.html">Projects</a></li>
-                        </ul>
-                    </li>
-
-
-                    <!-- <li>
-							<a href="Downloads.html">DOWNLOADS</a>
-						</li> -->
-
-                    <li>
-                        <a href="Contact.html">CONTACT US</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-
-			<div class="overlay"></div>
-		</div> 
-		<!-- header-section - end
-		================================================== -->
-
-
-		<!-- Main content -->
-  <main class="flex-grow-1">
-    <!-- breadcrumb-section -->
-    <section id="breadcrumb-section" class="about1-section text-center bg-light text-dark pt-100 pb-50">
+<body>
+  <main>
+    <!-- Breadcrumb -->
+    <section class="about1-section text-center bg-dark text-white pt-5 pb-4">
       <div class="container">
-        <h2 class="page-title mb-30 text-white">Company Profile</h2>
+        <h2 class="page-title mb-3">Contact</h2>
         <div class="breadcrumb-nev ul-li-center clearfix" data-aos="fade-up" data-aos-delay="300">
-          <ul class="text-white clearfix">
-            <li><a href="index.html"><i class="fas fa-home mr-1"></i>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <li><i class="fas fa-chevron-circle-right mr-1"></i> About Us</li>
+          <ul class="text-white list-inline">
+            <li class="list-inline-item"><i class="fas fa-home"></i> <a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item">/</li>
+            <li class="list-inline-item"><i class="fas fa-chevron-right"></i> Contact Us</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Downloads section -->
-    <section class="bg-gray-50 py-5">
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="text-center text-3xl font-bold text-gray-800 mb-5">Downloads</h2>
-        <div class="row justify-content-center">
-          
-          <!-- Card 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-white p-4 rounded shadow-sm h-100">
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-file-pdf text-danger fa-2x me-3"></i>
-                <div>
-                  <h5 class="mb-1 text-black">Company Profile</h5>
-                  <small class="text-muted">PDF • 1.2 MB</small>
-                </div>
+        <div class="row g-4">
+          <!-- Contact Info -->
+          <div class="col-lg-6">
+            <div class="contact-box">
+              <h3 class="mb-4">Get in Touch</h3>
+              <p>Reach out for project inquiries, feedback, or general questions.</p>
+              <ul class="list-unstyled contact-info mt-4">
+                <li><i class="fas fa-map-marker-alt text-info"></i> 123 Light Street, Glow City</li>
+                <li><i class="fas fa-phone-alt text-success"></i> +1 234 567 890</li>
+                <li><i class="fas fa-envelope text-danger"></i> contact@facadelighting.com</li>
+              </ul>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-threads"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-reddit"></i></a>
+                <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
               </div>
-              <a href="downloads/company-profile.pdf" download class="btn btn-primary w-100">
-                <i class="fas fa-download me-2"></i>Download
-              </a>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-white p-4 rounded shadow-sm h-100">
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-certificate text-success fa-2x me-3"></i>
-                <div>
-                  <h5 class="mb-1 text-black">ISO 9001 Certificate</h5>
-                  <small class="text-muted">PDF • 850 KB</small>
+          <!-- Contact Form -->
+          <div class="col-lg-6">
+            <div class="contact-box">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name">
                 </div>
-              </div>
-              <a href="downloads/iso-9001.pdf" download class="btn btn-success w-100">
-                <i class="fas fa-download me-2"></i>Download
-              </a>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+              </form>
             </div>
           </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-white p-4 rounded shadow-sm h-100">
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-file-zipper text-warning fa-2x me-3"></i>
-                <div>
-                  <h5 class="mb-1 text-black">Product Catalogue</h5>
-                  <small class="text-muted">ZIP • 4.5 MB</small>
-                </div>
-              </div>
-              <a href="downloads/catalogue.zip" download class="btn btn-warning  w-100">
-                <i class="fas fa-download me-2"></i>Download
-              </a>
-            </div>
-          </div>
-
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-dark" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <span>What services do you offer?</span>
+                  <i class="fas fa-plus accordion-icon"></i>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">We offer architectural and facade lighting design, installation, and maintenance services.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span>How can I request a quote?</span>
+                  <i class="fas fa-plus accordion-icon"></i>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">You can request a quote through our contact form or by emailing us.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span>Do you provide installation services?</span>
+                  <i class="fas fa-plus accordion-icon"></i>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes, we provide full installation services for all our lighting systems.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	 <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-dark" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        <div class="faq-wrapper">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                  <span>What services do you offer?</span>
+                  <i class="fas fa-plus accordion-toggle-icon"></i>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">We offer architectural and facade lighting design, installation, and maintenance services.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                  <span>How can I request a quote?</span>
+                  <i class="fas fa-plus accordion-toggle-icon"></i>
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">You can request a quote through our contact form or by emailing us.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+                  <span>Do you provide installation services?</span>
+                  <i class="fas fa-plus accordion-toggle-icon"></i>
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes, we provide full installation services for all our lighting systems.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<style>
+    body { background-color: #0f0f0f; color: white; }
+    .contact-box { background-color: #1c1c1c; border-radius: 12px; padding: 30px; }
+    .contact-info li { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .form-control, .form-control:focus { background-color: #2c2c2c; color: white; border-color: #444; }
+    .social-icons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .social-icons a { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: #2c2c2c; color: white; transition: all 0.3s ease; }
+    .social-icons a:hover { background-color: white; transform: scale(1.1); }
+    .social-icons a:hover i.fa-facebook-f { color: #1877f2; }
+    .social-icons a:hover i.fa-instagram { color: #e1306c; }
+    .social-icons a:hover i.fa-threads { color: #fff; }
+    .social-icons a:hover i.fa-twitter { color: #1da1f2; }
+    .social-icons a:hover i.fa-linkedin-in { color: #0077b5; }
+    .social-icons a:hover i.fa-pinterest { color: #bd081c; }
+    .social-icons a:hover i.fa-youtube { color: #ff0000; }
+    .social-icons a:hover i.fa-reddit { color: #ff4500; }
+    .social-icons a:hover i.fa-snapchat-ghost { color: #fffc00; }
+    .social-icons a:hover i.fa-whatsapp { color: #25d366; }
+    .social-icons a:hover i.fa-telegram { color: #0088cc; }
+
+    /* FAQ Section */
+    .faq-wrapper {
+      background-color: #181818;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #333;
+    }
+    .accordion-button {
+      background-color: transparent;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1rem;
+    }
+    .accordion-button::after { display: none; }
+    .accordion-toggle-icon {
+      font-size: 1.25rem;
+      margin-left: auto;
+    }
+    .accordion-body {
+      background-color: #2a2a2a;
+      color: #ccc;
+      padding: 16px;
+    }
+    iframe { width: 100%; height: 400px; border-radius: 12px; border: none; }
+  </style>
+
+
+    <!-- Map Section -->
+    <section class="py-5" style="background-color: #1c1c1c;">
+      <div class="container">
+        <iframe src="https://www.google.com/maps/embed?..." allowfullscreen loading="lazy"></iframe>
       </div>
     </section>
   </main>
 
-
-		
-		<!-- footer-section - start
-		================================================== -->
-		<footer id="footer-section" class="footer-section sec-ptb-10 clearfix">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block">
-							<ul class="clearfix">
-								<h5>Quick Links</h5>
-								<li><a href="#!">HOME</a></li>
-								<li><a href="service-1.html">ABOUT US</a></li>
-								<li><a href="Products.html">PRODUCTS</a></li>
-								<li><a href="Applications.html">APPLICATIONS</a></li>
-								<li><a href="#">SERVICES</a></li>
-								<!-- <li><a href="Downloads.html">DOWNLOADS</a></li> -->
-								<li><a href="contact.html">CONTACT US</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block clearfix">
-							<ul class="clearfix">
-								<h5>Products</h5>
-								    <li><a href="Pixel-LED-Strip.html">Pixel LED Strip</a></li>
-									<li><a href="portfolio-gird-boxed.html">Neon flex LED</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pixel LED bars</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pixel LED panel</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pixel dot lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Wall Washers lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pillar highlighters</a></li>
-									<li><a href="portfolio-gird-boxed.html">Wall window lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Gobo lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pixel media bars</a></li>
-									<li><a href="portfolio-gird-boxed.html">Pool lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Fountain lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Recessed ground lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">Tree highlighters</a></li>
-									<li><a href="portfolio-gird-boxed.html">Flood lights</a></li>
-									<li><a href="portfolio-gird-boxed.html">LED controllers</a></li>
-									<li><a href="portfolio-gird-boxed.html">Drivers</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block clearfix">
-								<ul class="clearfix">
-									<h5>Applications</h5>
-									<li><a href="#">Bridge Lighting</a></li>
-									<li><a href="#">Park Lighting</a></li>
-									<li><a href="#">Architectural Lighting</a></li>
-									<li><a href="#">River Lighting</a></li>
-									<li><a href="#">Ferris Wheel Lighting</a></li>
-									<li><a href="#">Signs and Logos</a></li>
-									<li><a href="#">Outdoor Media Facade</a></li>
-									<li><a href="#">Street Lighting</a></li>
-								</ul>
-								
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block clearfix">
-							<ul class="clearfix">
-								<h5>Services</h5>
-								<li><a href="Catalogues.html">Catalogues</a></li>
-								<li><a href="Downloads.html">Downloads</a></li>
-								<li><a href="Solutions.html">Solutions</a></li>
-								<li><a href="Projects.html">Projects</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block clearfix">
-							<ul class="clearfix">
-								<h5>Contact</h5>
-								<li><p><span>Address: </span><span style="color:#8a8a8a;">Welford Road,<br/>LE26BD, Leicester, UK</span><br/>
-								Call Us: <a href="#!">+44 7722052333</a><br/>
-								Mail Us: <a href="mailto:facade@gmail.com">facade@gmail.com</a></p></li>
-							  </ul>
-						</div>
-					</div>
-
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<div class="useful-links ul-li-block clearfix">
-						  <!-- Social Icons -->
-						  <h5>Social Media</h5>
-						  <ul class="clearfix">
-							<li>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/fb.png" alt="Facebook" style="width:30px; margin-right:5px;">
-							  </a>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/instagram.png" alt="Instagram" style="width:30px; margin-right:5px;">
-							  </a>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/twitter.png" alt="LinkedIn" style="width:30px; margin-right:5px;">
-							  </a>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/youtube.png" alt="LinkedIn" style="width:30px;">
-							  </a>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/linkedin.png" alt="Facebook" style="width:30px; margin-right:5px;">
-							  </a>
-							  <a href="#!" target="_blank">
-								<img src="assets/images/icons/Pinterest.png" alt="Instagram" style="width:30px; margin-right:5px;">
-							  </a>
-							</li>
-							<li>
-								<a href="#!" target="_blank">
-								  <img src="assets/images/icons/whatsapp.png" alt="LinkedIn" style="width:30px; margin-right:5px;">
-								</a>
-								<a href="#!" target="_blank">
-								  <img src="assets/images/icons/tiktok.png" alt="LinkedIn" style="width:30px;">
-								</a>
-								<a href="#!" target="_blank">
-									<img src="assets/images/icons/threads.png" alt="Facebook" style="width:30px; margin-right:5px;">
-								  </a>
-								<a href="#!" target="_blank">
-									<img src="assets/images/icons/reddit.png" alt="Facebook" style="width:30px; margin-right:5px;">
-								</a>
-								<a href="#!" target="_blank">
-									<img src="assets/images/icons/telegram.png" alt="Instagram" style="width:30px; margin-right:5px;">
-								  </a>
-							  </li>
-						  </ul>
-					  
-						</div>
-					  </div>
-									  
-					
-				</div>
-			</div>
-<br/>
- <!-- Copyright Section -->
- <div class="copyright py-3">
-	<div class="container">
-	  <div class="row align-items-center">
-		
-		<!-- Left: Desktop Left-Aligned, Mobile Center -->
-		<div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
-		  <p class="mb-0 text-muted text-left">
-			© 2025 | FACADE LIGHTING
-		  </p>
-		</div>
-  
-		<!-- Right: Desktop Right-Aligned, Mobile Center -->
-		<div class="col-12 col-md-6 text-center text-md-end">
-		  <p class="mb-0 text-muted text-right">
-			Developed by <a href="#">Realista Marketing</a>
-		  </p>
-		</div>
-  
-	  </div>
-	</div>
-  </div>
-  
-
-		</footer>
-		<!-- footer-section - end
-		================================================== -->
-		<script>
-			$("#partners-carousel").owlCarousel({
-			loop: true,
-			margin: 20,
-			nav: false,
-			autoplayTimeout: 2000,
-			smartSpeed: 200,
-			dots: true,
-			responsive: {
-			  0: { items: 1 },
-			  576: { items: 2 },
-			  768: { items: 3 },
-			  992: { items: 4 }
-			}
-		  });
-		  </script>
-
-		<!-- jquery include -->
-		<script src="assets/js/jquery-1.10.1.min.js"></script>
-		<script src="assets/js/popper.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<script src="assets/js/counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-		<script src="assets/js/countdown.js"></script>
-		<script src="assets/js/magnific-popup.min.js"></script>
-		<script src="assets/js/isotope.pkgd.min.js"></script>
-		<script src="assets/js/masonry.pkgd.min.js"></script>
-		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-		<script src="assets/js/jquery-ui.js"></script>
-		<script src="assets/js/aos.js"></script>
-		<script src="assets/js/validate.js"></script>
-
-		<!-- google map - jquery include -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
-        <script src="assets/js/gmaps.min.js"></script>
-
-		<!-- mobile menu - jquery include -->
-        <script src="assets/js/mCustomScrollbar.js"></script>
-
-		<!-- custom - jquery include -->
-		<script src="assets/js/custom.js"></script>
-
-		<!-- AOS Animation JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200,
-    once: true
-  });
-</script>
-
-<!-- JS Dependencies -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+  <script>AOS.init({ duration: 1200, once: true });</script>
+</body>
 
-
-
-	</body>
 </html>
