@@ -13524,21 +13524,19 @@ textarea.form-control1 {
 /*
   <!--product-banner-wrapper, product-item end-->*/
 
-  /*lightonoffanimation start*/
  .lightoffandon-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  touch-action: none;
-  background-color: #000;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    touch-action: none;
+    background-color: #000;
 
-  padding-left: 24px;  /* adjust as needed */
-  padding-right: 24px; /* adjust as needed */
-  box-sizing: border-box; /* ensures padding doesn't break layout */
-}
-
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
 
   .lightoffandon-image {
     position: absolute;
@@ -13605,6 +13603,43 @@ textarea.form-control1 {
   .lightoffandon-buttons .left { left: -40px; }
   .lightoffandon-buttons .right { right: -40px; }
 
+  /* Text with no background, white, large bold font */
+  .light-text {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    color: #fff;
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    user-select: none;
+    display: flex;
+    gap: 4px;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .light-text.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .light-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-20px) scale(0.8);
+  }
+
+  @keyframes letterAppear {
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
   @media (max-width: 768px) {
     .lightoffandon-container {
       height: 300px;
@@ -13618,6 +13653,11 @@ textarea.form-control1 {
       width: 22px;
       height: 22px;
       font-size: 12px;
+    }
+
+    .light-text {
+      font-size: 32px;
+      top: 15%;
     }
   }
   /*lightonoffanimationend*/

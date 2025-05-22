@@ -535,37 +535,71 @@
       <span class="left">&#60;</span>
       <span class="right">&#62;</span>
     </div>
+    <span class="light-text" id="light-text">
+      <!-- Each letter wrapped in a span -->
+      <span>L</span><span>i</span><span>g</span><span>h</span><span>t</span>&nbsp;<span>O</span><span>n</span>
+    </span>
   </div>
 </section>
 
 <script>
-  const divider = document.getElementById('lightoffandon-divider');
-  const lightOff = document.getElementById('lightoffandon-off');
-  let isDragging = false;
+const divider = document.getElementById('lightoffandon-divider');
+const lightOff = document.getElementById('lightoffandon-off');
+const lightText = document.getElementById('light-text');
+let isDragging = false;
 
-  ['mousedown', 'touchstart'].forEach(evt =>
-    divider.addEventListener(evt, e => {
-      e.preventDefault();
-      isDragging = true;
-    })
-  );
+['mousedown', 'touchstart'].forEach(evt =>
+  divider.addEventListener(evt, e => {
+    e.preventDefault();
+    isDragging = true;
+    lightText.classList.add('show');  // Show text immediately on drag start
+    animateLetters();
+  })
+);
 
-  ['mouseup', 'touchend'].forEach(evt =>
-    document.addEventListener(evt, () => isDragging = false)
-  );
+['mouseup', 'touchend'].forEach(evt =>
+  document.addEventListener(evt, () => {
+    if (isDragging) {
+      isDragging = false;
+      lightText.classList.remove('show');  // Hide text immediately on drag end
+      resetLetters();
+    }
+  })
+);
 
-  ['mousemove', 'touchmove'].forEach(evt =>
-    document.addEventListener(evt, e => {
-      if (!isDragging) return;
+['mousemove', 'touchmove'].forEach(evt =>
+  document.addEventListener(evt, e => {
+    if (!isDragging) return;
 
-      const x = e.touches ? e.touches[0].clientX : e.clientX;
-      const w = window.innerWidth;
-      const clamped = Math.max(0, Math.min(x, w));
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    const w = window.innerWidth;
+    const clamped = Math.max(0, Math.min(x, w));
 
-      divider.style.left = `${clamped}px`;
-      lightOff.style.clipPath = `inset(0 ${w - clamped}px 0 0)`;
-    })
-  );
+    divider.style.left = `${clamped}px`;
+    lightOff.style.clipPath = `inset(0 ${w - clamped}px 0 0)`;
+
+    // Slide text from left side proportionally
+    lightText.style.left = `${clamped / 2}px`; 
+  })
+);
+
+function animateLetters() {
+  const letters = lightText.querySelectorAll('span');
+  letters.forEach((letter, index) => {
+    letter.style.animation = `letterAppear 0.5s ease forwards`;
+    letter.style.animationDelay = `${index * 0.1}s`;
+  });
+}
+
+function resetLetters() {
+  const letters = lightText.querySelectorAll('span');
+  letters.forEach(letter => {
+    letter.style.animation = 'none';
+    letter.style.opacity = 0;
+    letter.style.transform = 'translateX(-20px) scale(0.8)';
+  });
+}
+
 </script>
 
 <!--lightonoffanimation end-->
