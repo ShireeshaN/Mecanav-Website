@@ -368,20 +368,21 @@ setTimeout(() => {
   </div>
 </div>
 
+<div id="catalogueGrid"></div>
+
 <script>
   const catalogues = [
-    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.1.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.2.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/3.png", viewLink: "catalogues1.3.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/4.png", viewLink: "catalogues1.4.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.5.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.6.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/3.png", viewLink: "catalogues1.7.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/4.png", viewLink: "catalogues1.8.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.9.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.10.html", downloadLink: "#" },
-     { image: "assets/images/animatedimages/catbook/3.png", viewLink: "catalogues1.9.html", downloadLink: "#" },
-    { image: "assets/images/animatedimages/catbook/4.png", viewLink: "catalogues1.10.html", downloadLink: "#" }
+    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.1.html", downloadLink: "catalogues1.1.html" },
+    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.2.html", downloadLink: "catalogues1.2.html" },
+    { image: "assets/images/animatedimages/catbook/3.png", viewLink: "catalogues1.3.html", downloadLink: "catalogues1.3.html" },
+    { image: "assets/images/animatedimages/catbook/4.png", viewLink: "catalogues1.4.html", downloadLink: "catalogues1.4.html" },
+    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.5.html", downloadLink: "catalogues1.5.html" },
+    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.6.html", downloadLink: "catalogues1.6.html" },
+    { image: "assets/images/animatedimages/catbook/3.png", viewLink: "catalogues1.7.html", downloadLink: "catalogues1.7.html" },
+    { image: "assets/images/animatedimages/catbook/4.png", viewLink: "catalogues1.8.html", downloadLink: "catalogues1.8.html" },
+    { image: "assets/images/animatedimages/catbook/1.png", viewLink: "catalogues1.9.html", downloadLink: "catalogues1.9.html" },
+    { image: "assets/images/animatedimages/catbook/2.png", viewLink: "catalogues1.10.html", downloadLink: "catalogues1.10.html" },
+
   ];
 
   const grid = document.getElementById("catalogueGrid");
@@ -390,17 +391,22 @@ setTimeout(() => {
     const card = document.createElement("div");
     card.className = "catalogue-card";
     card.innerHTML = `
-      <a href="${catalogue.viewLink}" target="_blank">
-        <img src="${catalogue.image}" alt="Catalogue">
+      <a href="${catalogue.viewLink}" target="_blank" rel="noopener noreferrer">
+        <img src="${catalogue.image}" alt="Catalogue" />
       </a>
       <div class="actions">
-        <a class="view-btn" href="${catalogue.viewLink}" target="_blank"><i class="fas fa-eye"></i> View</a>
-        <a class="download-btn" href="${catalogue.downloadLink}" download><i class="fas fa-download"></i> Download</a>
+        <a class="view-btn" href="${catalogue.viewLink}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-eye"></i> View
+        </a>
+        <a class="download-btn" href="${catalogue.downloadLink}" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
     `;
     grid.appendChild(card);
   });
 </script>
+
 
 
 
