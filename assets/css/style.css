@@ -1428,7 +1428,7 @@ button {
     font-weight: 400;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    font-family: "Font Awesome 5 Pro";
+    font-family: "Font Awesome 5 Free";
 }
 
 .header-section .main-menu>ul>.menu-item-has-child:hover>a:after {
@@ -1490,7 +1490,7 @@ button {
     position: absolute;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
-    font-family: "Font Awesome 5 Pro";
+    font-family: "Font Awesome 5 Free";
 }
 
 .header-section .main-menu>ul>.menu-item-has-child .submenu>li.menu-item-has-child:hover>a:after,
