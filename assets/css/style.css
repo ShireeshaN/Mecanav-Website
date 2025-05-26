@@ -13979,3 +13979,87 @@ textarea.form-control1 {
 }
 
 /*active inactive*/
+
+
+
+
+  .coming-soon-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 2.8s steps(14) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+    display: inline-block;
+  }
+
+  .coming-soon-subtext {
+    font-size: 1rem;
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeIn 2s ease 4s forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 14ch }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1 }
+  }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Base heading style */
+.headingo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  letter-spacing: 1px;
+ 
+  
+  white-space: nowrap;         /* 🛑 Prevents line breaks */
+  overflow: hidden;            /* Optional: hides overflow */
+  text-overflow: ellipsis;     /* Optional: adds ... if too long */
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: underline effect */
+.headingo::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes underlineGrow {
+  to {
+    width: 100px;
+    opacity: 1;
+  }
+}
