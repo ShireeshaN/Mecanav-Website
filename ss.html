@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighting Control Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .table-section {
+      flex: 1 1 400px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #444;
+      color: #fff;
+    }
+    .image-section {
+      flex: 1 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .image-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .image-box img {
+      width: 100%;
+      display: block;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    .switch input:checked + .slider {
+      background-color: #4CAF50;
+    }
+    .switch input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Group Name</th>
+            <th>Switch</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Curtain Wall</td>
+            <td><label class="switch"><input type="checkbox" onchange="toggleImage(0)"><span class="slider"></span></label></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Wall Washing</td>
+            <td><label class="switch"><input type="checkbox" onchange="toggleImage(1)"><span class="slider"></span></label></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Advertising Signage</td>
+            <td><label class="switch"><input type="checkbox" onchange="toggleImage(2)"><span class="slider"></span></label></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="image-section">
+      <div class="image-box"><img id="img0" src="off-curtain.jpg" data-off="off-curtain.jpg" data-on="on-curtain.jpg" alt="Curtain Wall"></div>
+      <div class="image-box"><img id="img1" src="off-wallwash.jpg" data-off="off-wallwash.jpg" data-on="on-wallwash.jpg" alt="Wall Washing"></div>
+      <div class="image-box"><img id="img2" src="off-signage.jpg" data-off="off-signage.jpg" data-on="on-signage.jpg" alt="Advertising Signage"></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleImage(index) {
+      const img = document.getElementById(`img${index}`);
+      const currentSrc = img.getAttribute('src');
+      const offSrc = img.getAttribute('data-off');
+      const onSrc = img.getAttribute('data-on');
+      img.setAttribute('src', currentSrc === offSrc ? onSrc : offSrc);
+    }
+  </script>
+</body>
+</html>

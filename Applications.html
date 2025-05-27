@@ -27,105 +27,9 @@
 		
 <!-- AOS Animation CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background-color: #000; color: #111; }
+ 
 
-    header {
-      text-align: center;
-      padding: 80px 40px 60px;
-    }
 
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      
-    }
-
-    .applications {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(300px, 1fr));
-      gap: 40px;
-      padding: 0 20px 60px;
-      
-    }
-
-    .app-card {
-      position: relative;
-      overflow: hidden;
-      background: #f5f5f5;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .app-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .image-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      /* object-fit: cover; */
-      transition: opacity 0.5s ease;
-      display: block;
-    }
-
-    .image-container img.hover-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
-
-    .app-card:hover .image-container img.default-img {
-      opacity: 0;
-    }
-
-    .app-card:hover .image-container img.hover-img {
-      opacity: 1;
-    }
-
-    .app-title {
-      text-align: center;
-      padding: 20px 10px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      background: #fff;
-    }
-
-    .badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #88cbc7;
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 4px;
-      z-index: 10;
-    }
-
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .applications {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(300px, 1fr));
-     
-    }
-    }
-  </style>
 </head>
 <body>
   <!-- header-section - start
@@ -285,17 +189,20 @@
 		================================================== -->
 
   <main >
-    <div class="applications">
+  <section class="applications-section">
+  <h2>Applications</h2>
+  <div class="applications">
+    <!-- One Card -->
     <div class="app-card" onclick="location.href='bridge-lighting-applications.html'">
       <span class="badge">NEW</span>
       <div class="image-container">
-        <img src="assets/images/applications/download (1).jpg" alt="Residential" class="default-img">
-        <img src="assets/images/brands/1.png" alt="Residential Hover" class="hover-img">
+        <img src="assets/images/applications/download (1).jpg" alt="Bridge Lighting" class="default-img">
+        <img src="assets/images/brands/1.png" alt="Bridge Lighting Hover" class="hover-img">
       </div>
       <div class="app-title">Bridge Lighting</div>
     </div>
-
-    <div class="app-card" onclick="location.href='park-lighting-applications.html'">
+   
+        <div class="app-card" onclick="location.href='park-lighting-applications.html'">
       <span class="badge">NEW</span>
       <div class="image-container">
         <img src="assets/images/applications/park.jpg" alt="Hotels" class="default-img">
@@ -386,7 +293,139 @@
       </div>
       <div class="app-title">Lights Shows</div>
     </div>
-    </div>
+    <!-- Repeat more .app-card blocks -->
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+  }
+
+  .applications-section {
+    padding: 60px 20px;
+    max-width: 1320px;
+    margin: auto;
+  }
+
+  .applications-section h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .applications-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 10px auto 0;
+    border-radius: 3px;
+  }
+
+  .applications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Smaller and tighter gap */
+    justify-items: center;
+  }
+
+  .app-card {
+    width: 100%;
+    max-width: 400px; /* Card width */
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .app-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Increased height */
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease;
+  }
+
+  .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .app-card:hover .default-img {
+    opacity: 0;
+  }
+
+  .app-card:hover .hover-img {
+    opacity: 1;
+  }
+
+  .app-title {
+    background: #EEEEEE;
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 14px 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff6f61;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 1024px) {
+    .applications {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .applications {
+      grid-template-columns: 1fr;
+    }
+
+    .image-container {
+      height: 240px;
+    }
+
+    .applications-section h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+
+
 
 
 
