@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Flip Box - Square with Full Image</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      padding: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .flip-grid {
+      display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .flip-box {
+      width: 100%;
+      aspect-ratio: 1.5 / 1.5; /* Makes it a square box */
+      perspective: 1000px;
+    }
+
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .flip-box-back {
+      background-color: #ffffff;
+      color: #333;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flip-grid">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-image: url('assets/images/animatedimages/bridgeanimya.jpg');"></div>
+      <div class="flip-box-back">
+        Track Lighting Luminaires – Stylish, focused and efficient for modern settings.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-image: url('assets/images/animatedimages/bridgeanimya.jpg');"></div>
+      <div class="flip-box-back">
+        Continuous Rows – Seamless linear lighting for professional spaces.
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-image: url('assets/images/animatedimages/bridgeanimya.jpg');"></div>
+      <div class="flip-box-back">
+        Continuous Rows – Seamless linear lighting for professional spaces.
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-image: url('assets/images/animatedimages/bridgeanimya.jpg');"></div>
+      <div class="flip-box-back">
+        Continuous Rows – Seamless linear lighting for professional spaces.
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

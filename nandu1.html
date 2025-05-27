@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Park Lighting Text Cycle</title>
+  <style>
+
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: url('assets/images/banners/allcoverimg.png') no-repeat center center/cover;
+    }
+
+    .sparkle-text {
+      position: absolute;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      text-shadow:
+        0 0 6px #fff,
+        0 0 12px #7fffd4,
+        0 0 18px #00ced1,
+        0 0 24px #40e0d0,
+        0 0 30px #48d1cc;
+      opacity: 0;
+      animation: sparkle 12s ease-in-out infinite;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    @keyframes sparkle {
+      0%, 12.49%   { opacity: 0; transform: scale(0.6); }
+      6.25%        { opacity: 1; transform: scale(1.2); }
+      12.5%, 100%  { opacity: 0; transform: scale(1); }
+    }
+
+    /* Each text block delayed for cycling effect */
+    .t1 { animation-delay: 0s; }
+    .t2 { animation-delay: 2s; }
+    .t3 { animation-delay: 4s; }
+    .t4 { animation-delay: 6s; }
+    .t5 { animation-delay: 8s; }
+    .t6 { animation-delay: 10s; }
+
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="sparkle-text t1" style="top: 52%; left: 70%;">Park Lighting</div>
+    <div class="sparkle-text t2" style="top: 27%; left: 15%;">Fountain</div>
+    <div class="sparkle-text t3" style="top: 5%; left: 50%;">Ferris Wheel</div>
+    <div class="sparkle-text t4" style="top: 47%; left: 40%;">Bridge Lights</div>
+    <div class="sparkle-text t5" style="top: 80%; left: 60%;">Pool Lighting</div>
+    <div class="sparkle-text t6" style="top: 35%; left: 85%;">Architectural Lighting</div>
+  </div>
+</body>
+</html>
