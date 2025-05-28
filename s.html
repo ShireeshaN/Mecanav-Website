@@ -1,196 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bridge Lighting Applications</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<div class="bridge-container">
+  <h2 class="bridge-title">Bridge Lighting Applications</h2>
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .main-title {
-      font-size: 2.4rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-      color: #fff;
-      animation: fadeInDown 0.8s ease both;
-    }
-
-    .carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-
-    .carousel {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .slide {
-      flex: 0 0 100%;
-      position: relative;
-      animation: zoomFade 0.8s ease-in-out;
-    }
-
-  .slide img {
-  width: 85%; /* slightly smaller */
-  height: 480px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto; /* Center horizontally */
-}
-
-
-    .overlay-heading {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      animation: fadeIn 1.2s ease-in-out both;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 36px;
-      color: #fff;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      z-index: 10;
-      padding: 8px;
-      opacity: 0.7;
-    }
-
-    .arrow:hover {
-      opacity: 1;
-    }
-
-    .arrow.left {
-      left: 10px;
-    }
-
-    .arrow.right {
-      right: 10px;
-    }
-
-    .description {
-      margin-top: 40px;
-      animation: fadeInUp 0.8s ease both;
-    }
-
-    .description h2 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .description p {
-      font-size: 1.05rem;
-      color: #ccc;
-      max-width: 760px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes zoomFade {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @media (max-width: 768px) {
-      .main-title { font-size: 2rem; }
-      .overlay-heading { font-size: 1.3rem; padding: 6px 12px; }
-      .slide img { height: 300px; width: 100%; }
-      .arrow { font-size: 28px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="main-title">Bridge Lighting Applications</div>
-
-    <div class="carousel-wrapper">
-      <div class="carousel" id="carousel">
-        <div class="slide">
-          <img src="assets/images/applications/bridge-1.jpg" alt="Bridge 1" />
-          <!-- <div class="overlay-heading">Bridge Lighting Applications</div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/images/applications/bridge-2.jpg" alt="Bridge 2" />
-          <!-- <div class="overlay-heading">Bridge Lighting Applications</div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/images/applications/bridge-3.jpg" alt="Bridge 3" />
-          <!-- <div class="overlay-heading">Bridge Lighting Applications</div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/images/applications/bridge-4.jpg" alt="Bridge 4" />
-          <!-- <div class="overlay-heading">Bridge Lighting Applications</div> -->
-        </div>
-      </div>
-
-      <button class="arrow left" id="prev">&#10094;</button>
-      <button class="arrow right" id="next">&#10095;</button>
+  <div class="bridge-carousel-wrapper">
+    <div class="bridge-carousel" id="bridge-carousel">
+      <div class="bridge-slide"><img src="assets/images/applications/bridge-1.jpg" alt="Bridge 1"></div>
+      <div class="bridge-slide"><img src="assets/images/applications/bridge-2.jpg" alt="Bridge 2"></div>
+      <div class="bridge-slide"><img src="assets/images/applications/bridge-3.jpg" alt="Bridge 3"></div>
+      <div class="bridge-slide"><img src="assets/images/applications/bridge-4.jpg" alt="Bridge 4"></div>
+      <div class="bridge-slide"><img src="assets/images/applications/bridge-5.jpg" alt="Bridge 5"></div>
     </div>
 
-    <div class="description">
-      <h2>Bridge Lighting Applications</h2>
-      <p>
-        Discover our innovative bridge lighting systems that combine safety with aesthetic appeal.
-        Perfect for infrastructure, architectural beauty, and smart city enhancements.
-      </p>
-    </div>
+    <button class="bridge-arrow left" id="bridge-prev">&#10094;</button>
+    <button class="bridge-arrow right" id="bridge-next">&#10095;</button>
   </div>
 
-  <script>
-    const carousel = document.getElementById('carousel');
-    const totalSlides = carousel.children.length;
-    let currentIndex = 0;
+  <div class="bridge-description">
+    <h3>Enhance Bridges with Dynamic Lighting</h3>
+    <p>Explore how our lighting solutions elevate bridge design — blending safety, function, and stunning visual appeal for cities and landmarks.</p>
+  </div>
+</div>
 
-    function updateSlide(index) {
-      currentIndex = (index + totalSlides) % totalSlides;
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+<style>
+  body {
+    background-color: #0e0e0e;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
 
-    document.getElementById('prev').addEventListener('click', () => updateSlide(currentIndex - 1));
-    document.getElementById('next').addEventListener('click', () => updateSlide(currentIndex + 1));
+  .bridge-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+  }
 
-    setInterval(() => updateSlide(currentIndex + 1), 5000);
-  </script>
-</body>
-</html>
+  .bridge-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    animation: fadeDown 1s ease forwards;
+  }
+
+  .bridge-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .bridge-carousel {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    will-change: transform;
+  }
+
+  .bridge-slide {
+    flex: 0 0 100%;
+    animation: zoomIn 1s ease forwards;
+  }
+
+  .bridge-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+  }
+
+  .bridge-slide img:hover {
+    transform: scale(1.02);
+  }
+
+  .bridge-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 34px;
+    color: #fff;
+    
+    border: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    z-index: 5;
+    
+  }
+  #bridge-prev{
+    background-color: transparent;
+  }
+   #bridge-next{
+    background-color: transparent;
+  }
+  
+
+  .bridge-arrow.left {
+    left: 20px;
+  }
+
+  .bridge-arrow.right {
+    right: 20px;
+  }
+
+  .bridge-description {
+    margin-top: 50px;
+    animation: fadeUp 1s ease forwards;
+  }
+
+  .bridge-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .bridge-description p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+
+
+  
+
+
+
+  /* Animations */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 768px) {
+    .bridge-title { font-size: 2rem; }
+    .bridge-slide img { height: 280px; }
+    .bridge-arrow { font-size: 30px; padding: 8px 12px; }
+    .bridge-description h3 { font-size: 1.4rem; }
+    .bridge-description p { font-size: 1rem; }
+  }
+</style>
+
+<script>
+  const carousel = document.getElementById("bridge-carousel");
+  const totalSlides = document.querySelectorAll(".bridge-slide").length;
+  let currentIndex = 0;
+
+  function showBridgeSlide(index) {
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  document.getElementById("bridge-next").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showBridgeSlide(currentIndex);
+  });
+
+  document.getElementById("bridge-prev").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showBridgeSlide(currentIndex);
+  });
+
+  // Optional: Auto-slide every 5 seconds
+  // setInterval(() => {
+  //   currentIndex = (currentIndex + 1) % totalSlides;
+  //   showBridgeSlide(currentIndex);
+  // }, 5000);
+</script>
