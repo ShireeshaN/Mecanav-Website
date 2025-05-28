@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lighting Control</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .on {
+      background-color: #4CAF50; /* Green */
+      color: white;
+    }
+    .off {
+      background-color: #f44336; /* Red */
+      color: white;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 70%;
+      height: auto;
+     
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lighting Controller</h1>
+
+  <div class="button-container">
+    <button id="btn0" class="off" onclick="toggle(0)">Ferris Wheel</button>
+    <button id="btn1" class="off" onclick="toggle(1)">Fountain</button>
+    <button id="btn5" class="off" onclick="toggle(5)"> Architect Light</button>
+    <button id="btn4" class="off" onclick="toggle(4)">Pool</button>
+    <button id="btn2" class="off" onclick="toggle(2)"> Bridge</button>
+    <button id="btn3" class="off" onclick="toggle(3)"> Park</button>
+    <button onclick="allOn()">ALL ON</button>
+    <button onclick="allOff()">ALL OFF</button>
+  </div>
+
+  <img id="display" src="../assets/images/animationcode/000000.png" alt="Lighting View">
+
+  <script>
+    let state = [0, 0, 0, 0, 0, 0]; // All lights off by default
+
+    function updateImage() {
+      const binary = state.join('');
+      document.getElementById('display').src = `../assets/images/animationcode/${binary}.png`;
+      updateButtons();
+    }
+
+    function updateButtons() {
+      for (let i = 0; i < 6; i++) {
+        const btn = document.getElementById(`btn${i}`);
+        if (btn) {
+          if (state[i] === 1) {
+            btn.classList.remove("off");
+            btn.classList.add("on");
+          } else {
+            btn.classList.remove("on");
+            btn.classList.add("off");
+          }
+        }
+      }
+    }
+
+    function toggle(index) {
+      state[index] = state[index] ? 0 : 1;
+      updateImage();
+    }
+
+    function allOn() {
+      state = [1, 1, 1, 1, 1, 1];
+      updateImage();
+    }
+
+    function allOff() {
+      state = [0, 0, 0, 0, 0, 0];
+      updateImage(); // Will show 000000.png
+    }
+
+    // Show initial image and button states on load
+    updateImage();
+  </script>
+
+</body>
+</html>
