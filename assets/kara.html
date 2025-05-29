@@ -2,142 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lighting Control</title>
-  <style>
+ <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    width: 300px;
+    background-color: #222;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .sidebar h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .toggle-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .toggle-group label {
+    font-size: 16px;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b5563;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #3b82f6;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .control-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .control-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .on-btn {
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+  }
+
+  .on-btn:hover {
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+  }
+
+  .off-btn {
+    background: linear-gradient(to right, #6b7280, #9ca3af);
+  }
+
+  .off-btn:hover {
+    background: linear-gradient(to right, #4b5563, #6b7280);
+  }
+
+  /* Mobile view */
+  @media (max-width: 768px) {
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #1a1a1a;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
+      flex-direction: column;
+      height: auto;
     }
 
     .sidebar {
-      width: 300px;
-      background-color: #222;
-      padding: 30px 20px;
-      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar h1 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .toggle-group {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-
-    .toggle-group label {
-      font-size: 16px;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #4b5563;
-      transition: 0.4s;
-      border-radius: 24px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-
-input:checked + .slider {
-  background-color: #3b82f6;
-}
-
-
-    input:checked + .slider:before {
-      transform: translateX(26px);
+      width: 100%;
+      padding: 20px;
+      box-shadow: none;
     }
 
     .main-content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #111;
+      width: 100%;
+      padding: 10px;
     }
 
     img {
-      max-width: 90%;
+      width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
 
-  .control-buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
+    .control-buttons {
+      margin-top: 20px;
+    }
 
-.control-btn {
-  padding: 10px 20px;
-  font-size: 15px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  color: white;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    .control-btn {
+      flex: 1 1 45%;
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+</style>
 
-.on-btn {
-  background: linear-gradient(to right, #3b82f6, #60a5fa); /* blue gradient */
-}
 
-.on-btn:hover {
-  background: linear-gradient(to right, #2563eb, #3b82f6);
-}
 
-.off-btn {
-  background: linear-gradient(to right, #6b7280, #9ca3af); /* gray gradient */
-}
 
-.off-btn:hover {
-  background: linear-gradient(to right, #4b5563, #6b7280);
-}
+ 
 
-  </style>
+
+  
 </head>
 <body>
 

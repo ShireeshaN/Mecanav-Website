@@ -644,7 +644,7 @@
     height: auto;
     z-index: 10;
     pointer-events: none;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85));
+   
     transition: top 1.8s cubic-bezier(0.4, 0, 0.2, 1), left 1.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center center;
   }
