@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
     <link rel="stylesheet" type="text/css" href="assets/css/boc_reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/imagecontrolanimation.css">
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -791,6 +792,149 @@ function resetLetters() {
 </div>
 <!--maptest start-->
 
+<script>
+ window.addEventListener('load', () => {
+    const plane = document.querySelector('.moving-plane');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+
+    let currentIndex = 0;
+
+    function movePlane() {
+      const dot = dots[currentIndex];
+
+      const left = dot.offsetLeft + dot.offsetWidth / 2 - plane.offsetWidth / 2;
+      const top = dot.offsetTop + dot.offsetHeight / 2 - plane.offsetHeight / 2;
+
+      // Move plane smoothly
+      plane.style.left = `${left}px`;
+      plane.style.top = `${top}px`;
+
+      // Move to next dot after delay
+      currentIndex = (currentIndex + 1) % dots.length;
+      setTimeout(movePlane, 2500); // pauses 2.5 seconds for smooth effect
+    }
+
+    // Start plane movement
+    movePlane();
+  });
+</script>
+
+
+
+
+<!--animation light controlling-->
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; min-height: 100vh;">
+  <div class="sidebar">
+    <!-- <h1>Lighting Controller</h1> -->
+
+    <div class="toggle-group">
+      <label for="toggle0">🎡 Ferris Wheel Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle0" onchange="toggle(0)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-group">
+      <label for="toggle1">⛲ Fountain Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle1" onchange="toggle(1)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-group">
+      <label for="toggle5">🏛️ Architecture Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle5" onchange="toggle(5)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-group">
+      <label for="toggle4">🏊 Pool Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle4" onchange="toggle(4)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-group">
+      <label for="toggle2">🌉 Bridge Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle2" onchange="toggle(2)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-group">
+      <label for="toggle3">🌳 Park Lighting</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle3" onchange="toggle(3)">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+   <div class="control-buttons">
+  <button class="control-btn on-btn" onclick="allOn()">🔆 All ON</button>
+  <button class="control-btn off-btn" onclick="allOff()">🌑 All OFF</button>
+</div>
+  </div>
+
+  <div class="main-content">
+    <img id="display" src="../assets/images/animationcode/000000.png" alt="Lighting View">
+  </div>
+
+</div>
+  <script>
+    let state = [0, 0, 0, 0, 0, 0];
+
+    function updateImage() {
+      const binary = state.join('');
+      document.getElementById('display').src = `../assets/images/animationcode/${binary}.png`;
+      updateToggles();
+    }
+
+    function updateToggles() {
+      for (let i = 0; i < 6; i++) {
+        const toggle = document.getElementById(`toggle${i}`);
+        if (toggle) {
+          toggle.checked = state[i] === 1;
+        }
+      }
+    }
+
+    function toggle(index) {
+      state[index] = state[index] ? 0 : 1;
+      updateImage();
+    }
+
+    function allOn() {
+      state = [1, 1, 1, 1, 1, 1];
+      updateImage();
+    }
+
+    function allOff() {
+      state = [0, 0, 0, 0, 0, 0];
+      updateImage();
+    }
+
+    updateImage();
+  </script>
+
+
+<!--animation light controlling-->
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -871,7 +1015,7 @@ function resetLetters() {
       </div>
 
       <div class="col-lg-6 text-center">
-        <img src="assets/images/animatedimages/contopimg.png" alt="Decorative" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px;">
+        <img src="" alt="Decorative" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px;">
       </div>
     </div>
 
