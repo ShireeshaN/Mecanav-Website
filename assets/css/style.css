@@ -2705,12 +2705,12 @@ button {
 
 @media (max-width: 768px) {
     .partners-section .item .partner-logo {
-        width: 135px;
-        height: 135px;
+        width: 450px;
+        height: 300px;
     }
     .partners-section .item .partner-logo>img {
-        width: 100px;
-        height: 100px;
+        width: 450;
+        height: 300px;
     }
 }
 
@@ -2892,7 +2892,7 @@ button {
 /* about section - start */
 
 .about1-section {
-    background: url('../images/applications/architech-2.jpg') center center / cover no-repeat;
+    background: url('../images/brands/bri.webp') center center / cover no-repeat;
     height: 50vh;
     width: 100%;
     margin: 0 auto;
@@ -13133,13 +13133,17 @@ textarea.form-control1 {
   font-size: 36px;
   margin-bottom: 20px;
   color: #000000;
+   font-weight: 300;
+  
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 2;
   color: #000;
   margin-bottom: 20px;
+  font-weight: lighter;
+   letter-spacing: 1.5px;
 }
 
 .cta-btn {
