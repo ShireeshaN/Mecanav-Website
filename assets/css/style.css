@@ -2705,12 +2705,12 @@ button {
 
 @media (max-width: 768px) {
     .partners-section .item .partner-logo {
-        width: 135px;
-        height: 135px;
+        width: 450px;
+        height: 300px;
     }
     .partners-section .item .partner-logo>img {
-        width: 100px;
-        height: 100px;
+        width: 450;
+        height: 300px;
     }
 }
 
