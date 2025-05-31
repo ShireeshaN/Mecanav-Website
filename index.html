@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -883,7 +882,7 @@ function resetLetters() {
   </div>
 
   <div class="main-content">
-    <img id="display" src="../assets/images/animationcode/000000.png" alt="Lighting View">
+    <img id="display" src="assets/images/animationcode/000000.png" alt="Lighting View">
   </div>
 
 </div>
@@ -892,7 +891,7 @@ function resetLetters() {
 
     function updateImage() {
       const binary = state.join('');
-      document.getElementById('display').src = `../assets/images/animationcode/${binary}.png`;
+      document.getElementById('display').src = `assets/images/animationcode/${binary}.png`;
       updateToggles();
     }
 
