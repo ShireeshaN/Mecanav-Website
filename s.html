@@ -1,180 +1,72 @@
-<div class="bridge-container">
-  <h2 class="bridge-title">Bridge Lighting Applications</h2>
-
-  <div class="bridge-carousel-wrapper">
-    <div class="bridge-carousel" id="bridge-carousel">
-      <div class="bridge-slide"><img src="assets/images/applications/bridge-1.jpg" alt="Bridge 1"></div>
-      <div class="bridge-slide"><img src="assets/images/applications/bridge-2.jpg" alt="Bridge 2"></div>
-      <div class="bridge-slide"><img src="assets/images/applications/bridge-3.jpg" alt="Bridge 3"></div>
-      <div class="bridge-slide"><img src="assets/images/applications/bridge-4.jpg" alt="Bridge 4"></div>
-      <div class="bridge-slide"><img src="assets/images/applications/bridge-5.jpg" alt="Bridge 5"></div>
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-model" data-aos="fade-right">
+      <model-viewer 
+        src="assets/media/Spotlight.glb"
+        alt="3D Spotlight"
+        auto-rotate 
+        camera-controls 
+        background-color="#111111"
+        style="width: 100%; height: 500px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+      </model-viewer>
     </div>
-
-    <button class="bridge-arrow left" id="bridge-prev">&#10094;</button>
-    <button class="bridge-arrow right" id="bridge-next">&#10095;</button>
+    <div class="about-content" data-aos="fade-left">
+      <h2>Light That Tells a Story</h2>
+      <p>
+        Facade Lighting Company was born from a vision to illuminate architecture with elegance and emotion. 
+        Our expertise lies in blending design and light to highlight building beauty — from villas and showrooms to smart commercial spaces.
+      </p>
+      <p>
+        With state-of-the-art technology and a creative approach, we transform facades into vibrant visual experiences. 
+        Your building deserves to shine, and we’re here to make that happen.
+      </p>
+    </div>
   </div>
+</section>
 
-  <div class="bridge-description">
-    <h3>Enhance Bridges with Dynamic Lighting</h3>
-    <p>Explore how our lighting solutions elevate bridge design — blending safety, function, and stunning visual appeal for cities and landmarks.</p>
-  </div>
-</div>
 
 <style>
-  body {
-    background-color: #0e0e0e;
-    color: #fff;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  .about-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .bridge-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    text-align: center;
-  }
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .bridge-title {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    animation: fadeDown 1s ease forwards;
-  }
+.about-model model-viewer {
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  background: #111;
+}
 
-  .bridge-carousel-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  }
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
-  .bridge-carousel {
-    display: flex;
-    transition: transform 0.8s ease-in-out;
-    will-change: transform;
-  }
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
 
-  .bridge-slide {
-    flex: 0 0 100%;
-    animation: zoomIn 1s ease forwards;
-  }
-
-  .bridge-slide img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 16px;
-    transition: transform 0.4s ease;
-  }
-
-  .bridge-slide img:hover {
-    transform: scale(1.02);
-  }
-
-  .bridge-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 34px;
-    color: #fff;
-    
-    border: none;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    z-index: 5;
-    
-  }
-  #bridge-prev{
-    background-color: transparent;
-  }
-   #bridge-next{
-    background-color: transparent;
-  }
-  
-
-  .bridge-arrow.left {
-    left: 20px;
-  }
-
-  .bridge-arrow.right {
-    right: 20px;
-  }
-
-  .bridge-description {
-    margin-top: 50px;
-    animation: fadeUp 1s ease forwards;
-  }
-
-  .bridge-description h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-
-  .bridge-description p {
-    font-size: 1.1rem;
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-
-
-  
-
-
-
-  /* Animations */
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.97); }
-    to { opacity: 1; transform: scale(1); }
-  }
-
-  @media (max-width: 768px) {
-    .bridge-title { font-size: 2rem; }
-    .bridge-slide img { height: 280px; }
-    .bridge-arrow { font-size: 30px; padding: 8px 12px; }
-    .bridge-description h3 { font-size: 1.4rem; }
-    .bridge-description p { font-size: 1rem; }
-  }
 </style>
 
+<!-- AOS CDN -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  const carousel = document.getElementById("bridge-carousel");
-  const totalSlides = document.querySelectorAll(".bridge-slide").length;
-  let currentIndex = 0;
-
-  function showBridgeSlide(index) {
-    const offset = -index * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-  }
-
-  document.getElementById("bridge-next").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showBridgeSlide(currentIndex);
-  });
-
-  document.getElementById("bridge-prev").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showBridgeSlide(currentIndex);
-  });
-
-  // Optional: Auto-slide every 5 seconds
-  // setInterval(() => {
-  //   currentIndex = (currentIndex + 1) % totalSlides;
-  //   showBridgeSlide(currentIndex);
-  // }, 5000);
+  AOS.init();
 </script>
