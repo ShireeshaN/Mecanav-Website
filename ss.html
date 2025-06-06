@@ -1,142 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lighting Control Panel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications Showcase</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
+      background: #fff;
     }
-    .container {
-      max-width: 1200px;
+
+    .applications-wrapper {
+      display: flex;
+      max-width: 1400px;
       margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: flex-start;
+      padding: 60px 20px;
     }
-    .table-section {
-      flex: 1 1 400px;
+
+    .app-nav {
+      width: 250px;
+      position: sticky;
+      top: 100px;
+      margin-right: 40px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .app-nav ul {
+      list-style: none;
+      padding: 0;
     }
-    th, td {
-      padding: 12px 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    th {
-      background-color: #444;
-      color: #fff;
-    }
-    .image-section {
-      flex: 1 1 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .image-box {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .image-box img {
-      width: 100%;
-      display: block;
-    }
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 40px;
-      height: 20px;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
+
+    .app-nav li {
+      margin: 20px 0;
       cursor: pointer;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: #ccc;
-      transition: .4s;
-      border-radius: 20px;
+      color: #000;
+      font-size: 16px;
+      font-weight: 300;
+      border-left: 4px solid transparent;
+      padding-left: 10px;
+      transition: 0.3s;
     }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 14px;
-      width: 14px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: .4s;
-      border-radius: 50%;
+
+    .app-nav li.active {
+      color: #c26b4c;
+      font-weight: 600;
+      border-left: 4px solid #c26b4c;
     }
-    .switch input:checked + .slider {
-      background-color: #4CAF50;
+
+    .app-content {
+      flex: 1;
     }
-    .switch input:checked + .slider:before {
-      transform: translateX(20px);
+
+    .section {
+      margin-bottom: 120px;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #c26b4c;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="table-section">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Group Name</th>
-            <th>Switch</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Curtain Wall</td>
-            <td><label class="switch"><input type="checkbox" onchange="toggleImage(0)"><span class="slider"></span></label></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Wall Washing</td>
-            <td><label class="switch"><input type="checkbox" onchange="toggleImage(1)"><span class="slider"></span></label></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Advertising Signage</td>
-            <td><label class="switch"><input type="checkbox" onchange="toggleImage(2)"><span class="slider"></span></label></td>
-          </tr>
-        </tbody>
-      </table>
+
+  <section class="applications-wrapper">
+    <!-- Sidebar Navigation -->
+    <div class="app-nav">
+      <ul>
+        <li class="active" data-target="residential">RESIDENTIAL</li>
+        <li data-target="bars">BARS RESTAURANTS HOTELS</li>
+        <li data-target="shops">SHOPS AND SALES OUTLETS</li>
+        <li data-target="outdoor">OUTDOOR</li>
+        <li data-target="offices">OFFICES AND WORKPLACES</li>
+      </ul>
     </div>
 
-    <div class="image-section">
-      <div class="image-box"><img id="img0" src="off-curtain.jpg" data-off="off-curtain.jpg" data-on="on-curtain.jpg" alt="Curtain Wall"></div>
-      <div class="image-box"><img id="img1" src="off-wallwash.jpg" data-off="off-wallwash.jpg" data-on="on-wallwash.jpg" alt="Wall Washing"></div>
-      <div class="image-box"><img id="img2" src="off-signage.jpg" data-off="off-signage.jpg" data-on="on-signage.jpg" alt="Advertising Signage"></div>
+    <!-- Right Side Images -->
+    <div class="app-content">
+      <div id="residential" class="section">
+        <h2>RESIDENTIAL</h2>
+        <img src="assets/images/residential.jpg" alt="Residential" />
+      </div>
+      <div id="bars" class="section">
+        <h2>BARS RESTAURANTS HOTELS</h2>
+        <img src="assets/images/bars.jpg" alt="Bars" />
+      </div>
+      <div id="shops" class="section">
+        <h2>SHOPS AND SALES OUTLETS</h2>
+        <img src="assets/images/shops.jpg" alt="Shops" />
+      </div>
+      <div id="outdoor" class="section">
+        <h2>OUTDOOR</h2>
+        <img src="assets/images/outdoor.jpg" alt="Outdoor" />
+      </div>
+      <div id="offices" class="section">
+        <h2>OFFICES AND WORKPLACES</h2>
+        <img src="assets/images/offices.jpg" alt="Offices" />
+      </div>
     </div>
-  </div>
+  </section>
 
   <script>
-    function toggleImage(index) {
-      const img = document.getElementById(`img${index}`);
-      const currentSrc = img.getAttribute('src');
-      const offSrc = img.getAttribute('data-off');
-      const onSrc = img.getAttribute('data-on');
-      img.setAttribute('src', currentSrc === offSrc ? onSrc : offSrc);
-    }
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".app-nav li");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.dataset.target === id) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const target = document.getElementById(link.dataset.target);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 40,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
