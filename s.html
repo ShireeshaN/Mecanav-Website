@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>Stage Lighting-Applications | Facade Lighting</title>
+		<title>Applications | Facade Lighting</title>
 		<link rel="shortcut icon" href="assets/images/logo/favourite-icon.png">
 
 		<!-- css include -->
@@ -229,11 +229,19 @@
       </ul>
     </div>
 
+   
+
+
     <!-- Content Sections -->
     <div class="app-content">
       <div id="bridge" class="section">
         <div class="heading">Bridge Lighting</div>
+        <a href="bridge-lighting-applications.html" class="image-link">
         <img src="assets/images/applications/bridge.jpg" alt="Bridge Lighting"/>
+        <div class="overlay">
+      <span>View More</span>
+      </a>
+    </div>
       </div>
       <div id="park" class="section">
         <div class="heading">Park Lighting</div>
@@ -373,6 +381,62 @@
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+
+.image-link {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-link img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-link:hover img {
+  transform: scale(1.05);
+}
+
+.image-link .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.image-link:hover .overlay {
+  opacity: 1;
+}
+
+.image-link .overlay span {
+  font-size: 22px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-link:hover .overlay span {
+  transform: scale(1.1);
+}
+
+
 
     @media screen and (max-width: 768px) {
       .applications-wrapper {
@@ -680,3 +744,6 @@
 
 	</body>
 </html>
+
+
+
