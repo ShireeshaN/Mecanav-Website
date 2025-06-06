@@ -1,213 +1,159 @@
-//map
-<script>
- window.addEventListener('load', () => {
-    const plane = document.querySelector('.moving-plane');
-    const dots = Array.from(document.querySelectorAll('.dot'));
-
-    let currentIndex = 0;
-
-    function movePlane() {
-      const dot = dots[currentIndex];
-
-      const left = dot.offsetLeft + dot.offsetWidth / 2 - plane.offsetWidth / 2;
-      const top = dot.offsetTop + dot.offsetHeight / 2 - plane.offsetHeight / 2;
-
-      // Move plane smoothly
-      plane.style.left = `${left}px`;
-      plane.style.top = `${top}px`;
-
-      // Move to next dot after delay
-      currentIndex = (currentIndex + 1) % dots.length;
-      setTimeout(movePlane, 2500); // pauses 2.5 seconds for smooth effect
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Book Display</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      padding: 100px 20px;
     }
 
-    // Start plane movement
-    movePlane();
-  });
-</script>
- 
-//map end  <!--maptest start-->
-<div class="map-section">
-  <div class="map-text">
-    <h2>Our Support</h2>
-    <p>Serving numerous countries with pre-sales and after-sales technical support</p>
-  </div>
+    .bookcats-section {
+      max-width: 1400px;
+      margin: auto;
+      text-align: center;
+    }
 
-  <div class="map-container">
-    <img src="assets/images/world-map.png" alt="World Map" class="map-image">
+    .bookcats-title {
+      font-size: 2.4rem;
+      margin-bottom: 50px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+    }
 
-    <!-- Dots -->
-    <div class="dot dot1"></div>
-    <div class="dot dot2"></div>
-    <div class="dot dot3"></div>
-    <div class="dot dot4"></div>
-    <div class="dot dot5"></div>
-    <div class="dot dot6"></div>
-    <div class="dot dot7"></div>
+    .bookcats-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      transform: translateY(60px);
+      opacity: 0;
+      transition: all 1.2s ease-in-out;
+    }
 
-    <!-- Plane -->
-    <img src="assets/images/icons/plain.png" alt="Plane" class="moving-plane" />
-  </div>
-</div>
-<!--maptest start-->
-<style>
+    .bookcats-wrapper.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
+    .bookcats-item {
+      width: 250px;
+      height: 360px;
+      transform: perspective(1000px) rotateY(-18deg) rotateX(5deg);
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow:
+        0 10px 30px rgba(255, 255, 255, 0.05),
+        inset 0 0 8px rgba(255, 255, 255, 0.04);
+    }
 
-.map-section {
-    background: linear-gradient(135deg, rgba(6, 6, 6, 0.05), rgba(9, 9, 9, 0.1));
-    padding: 3rem 1rem;
-    color: #e0e0e0;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
-  }
+    .bookcats-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 140%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.04), transparent);
+      transform: skewX(-20deg);
+    }
 
-  .map-text h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(255,255,255,0.3);
-  }
+    .bookcats-item:hover {
+      transform: perspective(1000px) rotateY(-8deg) rotateX(2deg) scale(1.03);
+      box-shadow:
+        0 15px 40px rgba(255, 255, 255, 0.1),
+        inset 0 0 12px rgba(255, 255, 255, 0.05);
+    }
 
-  .map-text p {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .bookcats-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
 
-  /* --- Map Container with Glassmorphism --- */
- .map-container {
-  position: relative;
-  /* max-width: 1000px;       */
-  height: auto;         /* added height */
-  margin: 0 auto;
-  border-radius: 15px;
-  overflow: hidden;
-  background: rgba(9, 9, 9, 0.07);
-  /* box-shadow:
-    0 8px 32px 0 rgba(7, 7, 7, 0.37); */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(5, 5, 5, 0.18);
-}
+    .bookcats-btn {
+      margin-top: 60px;
+      padding: 14px 32px;
+      background-color: #ffffff10;
+      border: 1px solid #fff;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-.map-image {
-  width: 100%;
-  height: 100%;       /* make image cover full height */
-  object-fit: cover;  /* scale image nicely */
-  display: block;
-  border-radius: 15px;
-  pointer-events: none;
-  user-select: none;
-}
+    .bookcats-btn:hover {
+      background-color: #ffffff20;
+      transform: scale(1.05);
+    }
 
-  /* --- Dots --- */
-  .dot {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(3, 80, 79, 0.9);
-    box-shadow:
-      0 0 8px 2px rgba(255, 255, 255, 0.8),
-      0 0 15px 4px rgba(255, 255, 255, 0.3);
-    animation: pulse 2.5s infinite;
-    z-index: 5;
-  }
+    /* 📱 Responsive: 2 per row on mobile */
+    @media (max-width: 768px) {
+      .bookcats-wrapper {
+        justify-content: space-between;
+        gap: 20px;
+      }
 
-/* Desktop dot positions */
-.dot1 { top: 55%; left: 71%; } /* Hyderabad */
-.dot2 { top: 36%; left: 32%; } /* UK */
-.dot3 { top: 45%; left: 75%; } /* China */
-.dot4 { top: 42%; left: 43%; } /* Italy */
-.dot5 { top: 22%; left: 18%; } /* Canada */
-.dot6 { top: 55%; left: 63%; } /* Dubai */
-.dot7 { top: 39%; left: 39%; } /* Germany */
+      .bookcats-item {
+        width: calc(50% - 10px);
+        height: auto;
+        transform: none;
+      }
 
-/* Mobile dot positions */
-@media (max-width: 768px) {
-  .dot1 { top: 60%; left: 70%; } /* Hyderabad */
-  .dot2 { top: 40%; left: 30%; } /* UK */
-  .dot3 { top: 50%; left: 78%; } /* China */
-  .dot4 { top: 45%; left: 45%; } /* Italy */
-  .dot5 { top: 25%; left: 20%; } /* Canada */
-  .dot6 { top: 60%; left: 65%; } /* Dubai */
-  .dot7 { top: 43%; left: 42%; } /* Germany */
+      .bookcats-item:hover {
+        transform: scale(1.03);
+      }
 
-  
-}
+      .bookcats-item img {
+        height: auto;
+      }
+    }
 
+    @media (max-width: 480px) {
+      .bookcats-item {
+        width: calc(50% - 10px);
+      }
+    }
+  </style>
+</head>
+<body>
 
+  <section class="bookcats-section">
+    <h2 class="bookcats-title">Catalogues</h2>
+    <div class="bookcats-wrapper" id="bookcatsWrapper">
+      <div class="bookcats-item"><img src="assets/images/animatedimages/Catbook/1.png" alt="Book 1" /></div>
+      <div class="bookcats-item"><img src="assets/images/animatedimages/Catbook/2.png" alt="Book 2" /></div>
+      <div class="bookcats-item"><img src="assets/images/animatedimages/Catbook/3.png" alt="Book 3" /></div>
+      <div class="bookcats-item"><img src="assets/images/animatedimages/Catbook/4.png" alt="Book 4" /></div>
+    </div>
 
+    <!-- View More Button -->
+    <button class="bookcats-btn" onclick="window.location.href='catalogue-page.html'">View More</button>
+  </section>
 
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 });
 
-  @keyframes pulse {
-    0% { transform: scale(0.85); opacity: 0.7; }
-    50% { transform: scale(1.3); opacity: 0.3; }
-    100% { transform: scale(0.85); opacity: 0.7; }
-  }
+    observer.observe(document.querySelector('.bookcats-wrapper'));
+  </script>
 
-  /* --- Plane --- */
-  .moving-plane {
-    position: absolute;
-    width: 45px; /* increased size */
-    height: auto;
-    z-index: 10;
-    pointer-events: none;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85));
-    transition: top 1.8s cubic-bezier(0.4, 0, 0.2, 1), left 1.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center center;
-  }
-
-  /* Responsive */
- @media (max-width: 768px) {
-  .map-section {
-    padding: 2rem 1rem;
-  }
-
-  .map-text h2 {
-    font-size: 1.6rem;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
-  }
-
-  .map-text p {
-    font-size: 1rem;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.4;
-  }
-
-   .map-container {
-    max-width: 100vw;      /* full viewport width */
-    width: calc(100vw - 2rem); /* allow some side padding */
-    height: auto;          /* auto height to keep aspect ratio */
-    aspect-ratio: 16 / 9;  /* maintain map aspect ratio */
-    margin: 0 auto;
-  }
-
-  .map-image {
-    width: 100%;   /* fill container width */
-    height: 100%;  /* fill container height */
-    object-fit: contain;  /* contain whole image inside */
-    border-radius: 15px;
-  }
-
-  .dot {
-    width: 14px;
-    height: 14px;
-    box-shadow:
-      0 0 6px 1.5px rgba(255, 255, 255, 0.7),
-      0 0 10px 2px rgba(255, 255, 255, 0.2);
-  }
-
-  .moving-plane {
-    width: 30px;
-  }
-}
-</style>
+</body>
+</html>
