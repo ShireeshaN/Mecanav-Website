@@ -1,148 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Applications Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Applications | Facade Lighting</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="shortcut icon" href="assets/images/logo/favourite-icon.png" />
+
+  <!-- CSS Files (keep your existing files) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.css" />
+  <link rel="stylesheet" href="assets/css/icomoon.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
   <style>
+    /* Custom fixes and additions */
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #ccc;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #fff;
-    }
-
-    .applications-wrapper {
+      padding: 0;
+      min-height: 100vh;
       display: flex;
-      max-width: 1400px;
-      margin: auto;
-      padding: 60px 20px;
+      flex-direction: column;
     }
 
-    .app-nav {
-      width: 250px;
+    /* Sticky header fix */
+    .header-section {
       position: sticky;
-      top: 100px;
-      margin-right: 40px;
+      top: 0;
+      z-index: 9999;
+      background-color: #000;
+      border-bottom: 1px solid #222;
     }
 
-    .app-nav ul {
+    /* Menu styles override if needed */
+    nav.main-menu ul {
+      display: flex;
+      gap: 20px;
       list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    nav.main-menu ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 5px;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    nav.main-menu ul li a:hover,
+    nav.main-menu ul li a.active {
+      color: #00bcd4;
+    }
+
+    /* Applications Title */
+    .applications-title {
+      font-size: 3.5rem;
+      font-weight: 300;
+      padding: 40px 60px 20px;
+      color: #ccc;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Applications content section */
+    .applications-wrapper {
+      max-width: 1200px;
+      margin: 0 auto 80px;
+      padding: 0 60px;
+      flex-grow: 1;
+      color: #eee;
+    }
+
+    /* Footer */
+    footer.footer-section {
+      background-color: #111;
+      color: #777;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      margin-top: auto;
+    }
+
+    footer.footer-section a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    footer.footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Bottom Navbar */
+    .bottom-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #111;
+      border-top: 1px solid #222;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 11000;
+    }
+
+    .bottom-navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
       padding: 0;
     }
 
-    .app-nav li {
-      margin: 20px 0;
-      cursor: pointer;
-      color: #000;
-      font-size: 16px;
-      font-weight: 300;
-      border-left: 4px solid transparent;
-      padding-left: 10px;
-      transition: 0.3s;
-    }
-
-    .app-nav li.active {
-      color: #c26b4c;
+    .bottom-navbar ul li a {
+      color: #ccc;
       font-weight: 600;
-      border-left: 4px solid #c26b4c;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 5px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .app-content {
-      flex: 1;
+    .bottom-navbar ul li a:hover,
+    .bottom-navbar ul li a.active {
+      background: #00bcd4;
+      color: #000;
     }
 
-    .section {
-      margin-bottom: 120px;
-    }
-
-    .section img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .section h2 {
-      font-size: 32px;
-      color: #c26b4c;
-      margin-bottom: 20px;
+    /* Push content above bottom navbar */
+    .content-wrapper {
+      padding-bottom: 60px; /* height of bottom navbar + some gap */
     }
   </style>
 </head>
+
 <body>
+  <!-- Header -->
+  <header id="header-section" class="header-section clearfix">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2">
+          <div class="brand-logo">
+            <a href="index.html">
+              <img src="assets/images/logo/facadelogos.png" alt="Facade Lighting Logo" />
+            </a>
+            <div class="mobile-menu-btns float-right ul-li-right">
+              <ul class="clearfix">
+                <li>
+                  <button type="button" class="menu-btn" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-  <section class="applications-wrapper">
-    <!-- Sidebar Navigation -->
-    <div class="app-nav">
-      <ul>
-        <li class="active" data-target="residential">RESIDENTIAL</li>
-        <li data-target="bars">BARS RESTAURANTS HOTELS</li>
-        <li data-target="shops">SHOPS AND SALES OUTLETS</li>
-        <li data-target="outdoor">OUTDOOR</li>
-        <li data-target="offices">OFFICES AND WORKPLACES</li>
-      </ul>
+        <div class="col-lg-10">
+          <nav class="main-menu ul-li-right clearfix" role="navigation">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="About.html">ABOUT US</a></li>
+              <li class="menu-item-has-child">
+                <a href="product.html">PRODUCTS</a>
+                <ul class="submenu">
+                  <li><a href="Pixel-LED-Strip-Product.html">Pixel LED Strip</a></li>
+                  <li><a href="Neon-Flex-LED-Product.html">Neon flex LED</a></li>
+                  <li><a href="Pixel-LED-Bars-Product.html">Pixel LED bars</a></li>
+                  <li><a href="Pixel-LED-Panel-Product.html">Pixel LED panel</a></li>
+                  <li><a href="Pixel-Dot-Lights-Product.html">Pixel dot lights</a></li>
+                  <li><a href="Wall-Washers-Lights-Product.html">Wall Washers lights</a></li>
+                  <li><a href="Pillar-Highlighters-Product.html">Pillar highlighters</a></li>
+                  <li><a href="Fan-Projection-Lights-Product.html">Fan Projection Lights</a></li>
+                  <li><a href="Wall-Window-lights-Product.html">Wall window lights</a></li>
+                  <li><a href="Gobo-Lights-Product.html">Gobo lights</a></li>
+                  <li><a href="Pool-Lights-Product.html">Pool lights</a></li>
+                  <li><a href="Fountain-Lights-Product.html">Fountain lights</a></li>
+                  <li><a href="Recessed-Ground-Lights-Product.html">Recessed ground lights</a></li>
+                  <li><a href="Tree-Highlighters-Product.html">Tree highlighters</a></li>
+                  <li><a href="Flood-Lights-Product.html">Flood lights</a></li>
+                  <li><a href="DMX-Controllers-Product.html">DMX controllers</a></li>
+                  <li><a href="Drivers-Product.html">Drivers</a></li>
+                </ul>
+              </li>
+              <li><a href="Applications.html" class="active">APPLICATIONS</a></li>
+              <li class="menu-item-has-child">
+                <a href="#">SERVICES</a>
+                <ul class="submenu">
+                  <li><a href="Catalogues.html">Catalogues</a></li>
+                  <li><a href="Downloads.html">Downloads</a></li>
+                  <li><a href="Solutions.html">Solutions</a></li>
+                  <li><a href="Projects.html">Projects</a></li>
+                </ul>
+              </li>
+              <li><a href="Contact.html">CONTACT US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <!-- Right Side Images -->
-    <div class="app-content">
-      <div id="residential" class="section">
-        <h2>RESIDENTIAL</h2>
-        <img src="assets/images/residential.jpg" alt="Residential" />
-      </div>
-      <div id="bars" class="section">
-        <h2>BARS RESTAURANTS HOTELS</h2>
-        <img src="assets/images/bars.jpg" alt="Bars" />
-      </div>
-      <div id="shops" class="section">
-        <h2>SHOPS AND SALES OUTLETS</h2>
-        <img src="assets/images/shops.jpg" alt="Shops" />
-      </div>
-      <div id="outdoor" class="section">
-        <h2>OUTDOOR</h2>
-        <img src="assets/images/outdoor.jpg" alt="Outdoor" />
-      </div>
-      <div id="offices" class="section">
-        <h2>OFFICES AND WORKPLACES</h2>
-        <img src="assets/images/offices.jpg" alt="Offices" />
-      </div>
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <h1 class="applications-title">Applications</h1>
+
+    <section class="applications-wrapper">
+      <!-- Your applications content goes here -->
+      <p>Welcome to the applications section. Add your applications details, cards or projects here.</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-section" class="footer-section sec-ptb-10 clearfix">
+    <div class="container">
+      <p>&copy; 2025 Facade Lighting. All rights reserved.</p>
+      <p>
+        Designed &amp; Developed by
+        <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">Your Company</a>
+      </p>
     </div>
-  </section>
+  </footer>
 
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-navbar" aria-label="Bottom Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="Applications.html" class="active">Applications</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- JS Files -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- Mobile menu toggle script -->
   <script>
-    const sections = document.querySelectorAll(".section");
-    const navLinks = document.querySelectorAll(".app-nav li");
+    const menuBtn = document.querySelector('.menu-btn');
+    const mainMenu = document.querySelector('nav.main-menu');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
-            navLinks.forEach((link) => {
-              link.classList.remove("active");
-              if (link.dataset.target === id) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        const target = document.getElementById(link.dataset.target);
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 40,
-            behavior: "smooth",
-          });
-        }
-      });
+    menuBtn.addEventListener('click', () => {
+      mainMenu.classList.toggle('open');
     });
   </script>
 </body>
+
 </html>

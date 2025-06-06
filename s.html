@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Applications | Facade Lighting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
+		<title>Stage Lighting-Applications | Facade Lighting</title>
 		<link rel="shortcut icon" href="assets/images/logo/favourite-icon.png">
 
 		<!-- css include -->
@@ -27,10 +27,28 @@
 		
 <!-- AOS Animation CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
- 
-</head>
-<body>
-  <!-- header-section - start
+
+	</head>
+
+
+	<body>
+
+
+		<!-- backtotop - start -->
+		<div id="thetop"></div>
+		<div id="backtotop">
+			<a href="#" id="scroll">
+				<i class="far fa-arrow-up"></i>
+			</a>
+		</div>
+		<!-- backtotop - end -->
+
+		<!-- preloader - start -->
+		<div id="preloader"></div>
+		<!-- preloader - end -->
+
+
+	 <!-- header-section - start
 		================================================== -->
     <header id="header-section" class="header-section sticky-header clearfix">
         <div class="container">
@@ -63,13 +81,13 @@
                             </li>
 
                             <li class="menu-item">
-                                <a href="About.html">ABOUT US</a>
+                                <a href="About.html" class="active">ABOUT US</a>
                             </li>
 
                             <li class="menu-item-has-child">
                                 <a href="product.html">PRODUCTS</a>
                                 <ul class="submenu">
-									<li><a href="Pixel-LED-Strip-Product.html">Pixel LED Strip</a></li>
+										<li><a href="Pixel-LED-Strip-Product.html">Pixel LED Strip</a></li>
 									<li><a href="Neon-Flex-LED-Product.html">Neon flex LED</a></li>
 									<li><a href="Pixel-LED-Bars-Product.html">Pixel LED bars</a></li>
 									<li><a href="Pixel-LED-Panel-Product.html">Pixel LED panel</a></li>
@@ -90,7 +108,7 @@
                             </li>
 
                             <li class="menu-item">
-                                <a href="Applications.html" class="active">APPLICATIONS</a>
+                                <a href="Applications.html">APPLICATIONS</a>
 
                             </li>
 
@@ -127,7 +145,7 @@
                     </li>
 
                     <li>
-                        <a href="About.html">ABOUT US</a>
+                        <a href="About.html" class="active">ABOUT US</a>
 
                     </li>
 
@@ -156,7 +174,7 @@
                     </li>
 
                     <li>
-                        <a href="Applications.html" class="active">APPLICATIONS</a>
+                        <a href="Applications.html">APPLICATIONS</a>
                     </li>
 
                     <li>
@@ -170,7 +188,9 @@
                     </li>
 
 
-             
+                    <!-- <li>
+							<a href="Downloads.html">DOWNLOADS</a>
+						</li> -->
 
                     <li>
                         <a href="Contact.html">CONTACT US</a>
@@ -181,247 +201,258 @@
 
 
 
-        <div class="overlay"></div>
-    </div>
-    <!-- header-section - end
+			<div class="overlay"></div>
+		</div> 
+		<!-- header-section - end
 		================================================== -->
 
-  <main >
-<section class="applications-section">
-  <h2>Our Lighting Applications</h2>
-  <div class="applications-grid">
+ 
+ <div class="projects-title">Applications</div>
 
-    <div class="app-card" onclick="location.href='bridge-lighting-applications.html'">
-      <div class="badge">NEW</div>
-      <div class="card-img">
-        <img src="assets/images/applications/download (1).jpg" alt="Bridge Lighting" />
-        <div class="overlay-title">Bridge Lighting</div>
-      </div>
+  <section class="applications-wrapper">
+    <!-- Sidebar -->
+    <div class="app-nav">
+      <!-- <h3>APPLICATIONS</h3> -->
+      <ul id="appList">
+        <li class="active" data-target="bridge">Bridge Lighting</li>
+        <li data-target="park">Park Lighting</li>
+        <li data-target="architectural">Architectural Lighting</li>
+        <li data-target="studio">Studio Lighting</li>
+        <li data-target="stage">Stage Lighting</li>
+        <li data-target="street">Street Lighting</li>
+        <li data-target="pub">Pub Lighting</li>
+        <li data-target="river">River Lighting</li>
+        <li data-target="ferris">Ferris Wheel Lighting</li>
+        <li data-target="signs">Signs and Logos</li>
+        <li data-target="media">Outdoor Media Facade Lighting</li>
+        <li data-target="lightshows">Light Shows</li>
+      </ul>
     </div>
 
-    <!-- Duplicate below blocks for each application -->
-    <div class="app-card" onclick="location.href='park-lighting-applications.html'">
-      <div class="badge">NEW</div>
-      <div class="card-img">
-        <img src="assets/images/applications/park.jpg" alt="Park Lighting" />
-        <div class="overlay-title">Park Lighting</div>
+    <!-- Content Sections -->
+    <div class="app-content">
+      <div id="bridge" class="section">
+        <div class="heading">Bridge Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Bridge Lighting"/>
+      </div>
+      <div id="park" class="section">
+        <div class="heading">Park Lighting</div>
+        <img src="assets/images/applications/park.jpg" alt="Park Lighting"/>
+      </div>
+      <div id="architectural" class="section">
+        <div class="heading">Architectural Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Architectural Lighting"/>
+      </div>
+      <div id="studio" class="section">
+        <div class="heading">Studio Lighting</div>
+        <img src="assets/images/applications/park.jpg" alt="Studio Lighting"/>
+      </div>
+      <div id="stage" class="section">
+        <div class="heading">Stage Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Stage Lighting"/>
+      </div>
+      <div id="street" class="section">
+        <div class="heading">Street Lighting</div>
+        <img src="assets/images/applications/park.jpg" alt="Street Lighting"/>
+      </div>
+      <div id="pub" class="section">
+        <div class="heading">Pub Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Pub Lighting"/>
+      </div>
+      <div id="river" class="section">
+        <div class="heading">River Lighting</div>
+        <img src="assets/images/applications/park.jpg" alt="River Lighting"/>
+      </div>
+      <div id="ferris" class="section">
+        <div class="heading">Ferris Wheel Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Ferris Wheel Lighting"/>
+      </div>
+      <div id="signs" class="section">
+        <div class="heading">Signs and Logos</div>
+        <img src="assets/images/applications/park.jpg" alt="Signs and Logos"/>
+      </div>
+      <div id="media" class="section">
+        <div class="heading">Outdoor Media Facade Lighting</div>
+        <img src="assets/images/applications/bridge.jpg" alt="Outdoor Media Facade Lighting"/>
+      </div>
+      <div id="lightshows" class="section">
+        <div class="heading">Light Shows</div>
+        <img src="assets/images/applications/park.jpg" alt="Light Shows"/>
       </div>
     </div>
+  </section>
 
-    <!-- Duplicate below blocks for each application -->
-    <div class="app-card" onclick="location.href='park-lighting-applications.html'">
-      <div class="badge">NEW</div>
-      <div class="card-img">
-        <img src="assets/images/applications/park.jpg" alt="Park Lighting" />
-        <div class="overlay-title">Park Lighting</div>
-      </div>
-    </div>
+   <style>
 
-      <!-- Duplicate below blocks for each application -->
-    <div class="app-card" onclick="location.href='park-lighting-applications.html'">
-      <div class="badge">NEW</div>
-      <div class="card-img">
-        <img src="assets/images/applications/park.jpg" alt="Park Lighting" />
-        <div class="overlay-title">Park Lighting</div>
-      </div>
-    </div>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+    }
 
-    <!-- Add more cards as needed -->
-
-  </div>
-</section>
-
-
-
-<style>
-  body {
-  font-family: 'Poppins', sans-serif;
-  background: #0a0a0a;
-  color: #fff;
-  margin: 0;
+ .projects-title {
+  font-size: 64px;
+  color: #ccc;
+  padding: 40px 60px 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 1;
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 10;
 }
 
-.applications-section {
-  padding: 60px 20px;
-  max-width: 1320px;
+
+   .applications-wrapper {
+  display: flex;
+  max-width: 1400px;
   margin: auto;
+  padding: 0 60px 80px;
+  align-items: flex-start;
 }
 
-.applications-section h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-  color: #00ffe1;
-  text-transform: uppercase;
+   .app-nav {
+  width: 280px;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  padding-top: 0; /* removed extra space */
 }
 
-.applications-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 24px;
+     .app-nav h3 {
+  display: none; /* removed APPLICATIONS heading */
 }
 
-.app-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
+    .app-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+   .app-nav li {
+  padding: 12px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0, 255, 255, 0.08);
+  border-left: 4px solid transparent;
+  transition: 0.3s;
 }
 
-.app-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
-}
-
-.card-img {
-  position: relative;
-  height: 320px;
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-.card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.app-card:hover img {
-  transform: scale(1.08);
-}
-
-.overlay-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #00ffe1;
-  font-size: 1.2rem;
+    .app-nav li.active {
+  color: #c26b4c;
   font-weight: 600;
+  border-left: 4px solid #c26b4c;
+  background-color: #f5efec;
+}
+
+.app-content {
+  flex: 1;
+  padding-left: 60px;
+}
+.section {
+  margin-bottom: 100px;
+}
+
+.section .heading {
+  background-color: #c26b4c;
+  color: #fff;
+  font-size: 24px;
+  padding: 16px 30px;
+  border-radius: 6px;
+  /* display: inline-block; */
+  margin-bottom: 20px;
   text-align: center;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
-.app-card:hover .overlay-title {
-  opacity: 1;
+.section img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: #ff3366;
-  color: white;
-  padding: 6px 12px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 2;
-  text-transform: uppercase;
-}
+    @media screen and (max-width: 768px) {
+      .applications-wrapper {
+        flex-direction: column;
+      }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .applications-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
-  }
-}
+      .app-nav {
+        position: static;
+        width: 100%;
+      }
 
-@media (max-width: 600px) {
-  .applications-grid {
-    grid-template-columns: 1fr; /* 1 card per row on mobile */
-  }
+      .app-content {
+        padding-left: 0;
+      }
 
-  .applications-section h2 {
-    font-size: 2rem;
-  }
+      .projects-title {
+        font-size: 36px;
+        padding: 40px 20px 0;
+      }
+    }
+  </style>
 
-  .card-img {
-    height: 240px;
-  }
-}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const appList = document.querySelectorAll("#appList li");
+    const sections = document.querySelectorAll(".section");
+    const heading = document.getElementById("app-heading");
+    const image = document.getElementById("app-image");
 
-</style>
+    appList.forEach(item => {
+      item.addEventListener("click", () => {
+        const targetId = item.getAttribute("data-target");
+        const section = document.getElementById(targetId);
+        const scrollY = section.getBoundingClientRect().top + window.pageYOffset - 100;
+
+        window.scrollTo({
+          top: scrollY,
+          behavior: "smooth"
+        });
+
+        appList.forEach(li => li.classList.remove("active"));
+        item.classList.add("active");
+
+        // Update preview area
+        heading.textContent = item.getAttribute("data-title");
+        image.src = "assets/images/applications/" + item.getAttribute("data-img");
+        image.alt = item.getAttribute("data-title");
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const activeItem = document.querySelector(`.app-nav li[data-target="${id}"]`);
+
+          if (activeItem) {
+            appList.forEach(li => li.classList.remove("active"));
+            activeItem.classList.add("active");
+
+            // Update preview
+            heading.textContent = activeItem.getAttribute("data-title");
+            image.src = "assets/images/applications/" + activeItem.getAttribute("data-img");
+            image.alt = activeItem.getAttribute("data-title");
+          }
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
 
 
 
 
 
-
-   		<!-- partners-section - start
-			================================================== -->
-			<div id="partners-section" class="partners-section sec-ptb-10 bg-light-gray clearfix">
-				<div class="container" data-aos="fade-up" data-aos-delay="100">
-					<div id="partners-carousel" class="partners-carousel arrow-left-right owl-carousel owl-theme">
-
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P1.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P2.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P3.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P4.png" alt="">							
-							</a>
-						</div>
-
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P5.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P6.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P7.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P8.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P9.png" alt="">							
-							</a>
-						</div>
-						<div class="item">
-							<a class="partner-logo" href="#!">
-								<img class="after-image" src="assets/images/brands/P10.png" alt="">							
-							</a>
-						</div>
-					
-
-					</div>
-				</div>
-			</div>
-			<!-- partners-section - end
-			================================================== -->
-	
-  </main>
-    <!-- footer-section - start
+	    <!-- footer-section - start
 		================================================== -->
     <footer id="footer-section" class="footer-section sec-ptb-10 clearfix">
         <div class="container">
@@ -584,94 +615,68 @@
     </footer>
     <!-- footer-section - end
 		================================================== -->
+		
 
-    <!-- jQuery (must come before Owl Carousel JS) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- jquery include -->
+		<script src="assets/js/jquery-1.10.1.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<script src="assets/js/counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+		<script src="assets/js/countdown.js"></script>
+		<script src="assets/js/magnific-popup.min.js"></script>
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<script src="assets/js/masonry.pkgd.min.js"></script>
+		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+		<script src="assets/js/aos.js"></script>
+		<script src="assets/js/validate.js"></script>
 
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<!-- google map - jquery include -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
+        <script src="assets/js/gmaps.min.js"></script>
 
+		<!-- mobile menu - jquery include -->
+        <script src="assets/js/mCustomScrollbar.js"></script>
 
-    <!-- Bootstrap Bundle JS (includes Popper.js, required for accordion, dropdowns, etc.) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- custom - jquery include -->
+		<script src="assets/js/custom.js"></script>
 
+		<!-- AOS Animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-   
+<script>
+  const carousel = document.getElementById("bridge-carousel");
+  const totalSlides = document.querySelectorAll(".bridge-slide").length;
+  let currentIndex = 0;
 
-    <script>
-        $('.hero-slider').owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 800,
-            dots: true,
-            nav: false
-        });
-    </script>
+  function showBridgeSlide(index) {
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
 
-     <!-- jquery include -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    
-    <script src="assets/js/counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/countdown.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/masonry.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/validate.js"></script>
-    <script src="assets/js/check.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/application.js"></script>
-    <script src="assets/js/MorphSVGPlugin.min.js"></script>
-    <script src="assets/js/new_bocfe.js"></script>
+  document.getElementById("bridge-next").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showBridgeSlide(currentIndex);
+  });
 
-    <!-- google map - jquery include -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
-    <script src="assets/js/gmaps.min.js"></script>
+  document.getElementById("bridge-prev").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showBridgeSlide(currentIndex);
+  });
 
-    <!-- mobile menu - jquery include -->
-    <script src="assets/js/mCustomScrollbar.js"></script>
-
-    <!-- custom - jquery include -->
-    <script src="assets/js/custom.js"></script>
-
-
-    <script src="assets/js/main.js"></script>
-    <!--echo static_file('web/js/canvas_w2.js');-->
-
-    
-
-   
-
-    
-
-
-
-     <!-- Initialize the Carousel -->
-   <script>
-    $("#partners-carousel").owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: false,
-        autoplay: true,                // ✅ Needed for auto-scroll
-        autoplayTimeout: 2000,
-        smartSpeed: 600,
-        dots: false,                   // You can enable if needed
-        responsive: {
-            0: { items: 2 },
-            576: { items: 3 },
-            768: { items: 4 },
-            992: { items: 5 },
-            1200: { items: 6 }
-        }    });
+  // Optional: Auto-slide every 5 seconds
+  // setInterval(() => {
+  //   currentIndex = (currentIndex + 1) % totalSlides;
+  //   showBridgeSlide(currentIndex);
+  // }, 5000);
 </script>
 
 
 
-</body>
+
+
+
+	</body>
 </html>
