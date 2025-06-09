@@ -45,7 +45,7 @@
 		<!-- preloader - end -->
 
 
-    <!-- header-section - start
+  <!-- header-section - start
 		================================================== -->
     <header id="header-section" class="header-section sticky-header clearfix">
         <div class="container">
@@ -156,7 +156,7 @@
 									<li><a href="Pixel-Dot-Lights-Product.html">Pixel dot lights</a></li>
 									<li><a href="Wall-Washers-Lights-Product.html">Wall Washers lights</a></li>
 									<li><a href="Pillar-Highlighters-Product.html">Pillar highlighters</a></li>
-                  	<li><a href="Fan-Projection-Lights-Product.html">Fan Projection Lights</a></li>
+                  	<li><a href="Fan-Projection-Lights-Product.html" class="active">Fan Projection Lights</a></li>
 									<li><a href="Wall-Window-lights-Product.html">Wall window lights</a></li>
 									<li><a href="Gobo-Lights-Product.html">Gobo lights</a></li>
 									<li><a href="Pool-Lights-Product.html" class="">Pool lights</a></li>
@@ -592,6 +592,31 @@
 		<!-- custom - jquery include -->
 		<script src="assets/js/custom.js"></script>
 
+
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll(".sidebar-menu-wrapper .menu-item-has-child > a");
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        // Prevent default if it has a submenu
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains("submenu")) {
+          e.preventDefault();
+
+          // Close other open submenus (optional)
+          document.querySelectorAll(".sidebar-menu-wrapper .menu-item-has-child").forEach(item => {
+            if (item !== this.parentElement) {
+              item.classList.remove("open");
+            }
+          });
+
+          // Toggle the clicked one
+          this.parentElement.classList.toggle("open");
+        }
+      });
+    });
+  });
+</script>
 
 
 
