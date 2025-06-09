@@ -2709,8 +2709,9 @@ button {
         height: 300px;
     }
     .partners-section .item .partner-logo>img {
-        width: 450;
+
         height: 300px;
+        padding: 50px;
     }
 }
 
