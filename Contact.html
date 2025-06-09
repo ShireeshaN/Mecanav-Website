@@ -52,9 +52,7 @@
 		</div>
 		<!-- backtotop - end -->
 
-		<!-- preloader - start -->
-		<div id="preloader"></div>
-		<!-- preloader - end -->
+	
 
 
     <!-- header-section - start
@@ -154,7 +152,6 @@
 
 </button>
 
-
             <div id="menu-list" class="menu-list ul-li-block clearfix">
                 <ul class="clearfix">
                     <li class="menu-item-has-child">
@@ -166,7 +163,8 @@
 
                     </li>
 
-                    <li>
+                    <li class="menu-item-has-child">
+                    
                          <a href="#" data-toggle="collapse" aria-expanded="false">
     PRODUCTS <span class="dropdown-icon">+</span>
   </a>
@@ -196,7 +194,7 @@
                         <a href="Applications.html">APPLICATIONS</a>
                     </li>
 
-                    <li>
+                    <li class="menu-item-has-child">
                       <a href="#" data-toggle="collapse" aria-expanded="false">
     SERVICES <span class="dropdown-icon">+</span>
   </a>
@@ -225,6 +223,41 @@
 
         <div class="overlay"></div>
     </div>
+
+    <style>
+      /* Hide submenu by default */
+.sidebar-menu-wrapper .submenu {
+  display: none;
+  position: static;
+  padding-left: 15px;
+  background-color: #111;
+}
+
+/* Desktop view: Show submenu on hover */
+@media (min-width: 992px) {
+  .menu-item-has-child:hover .submenu {
+    display: block;
+    position: absolute;
+    background: #111;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .menu-item-has-child {
+    position: relative;
+  }
+
+  .submenu li {
+    white-space: nowrap;
+  }
+}
+
+/* Mobile: show submenu when .open class is added via JS */
+.sidebar-menu-wrapper .menu-item-has-child.open .submenu {
+  display: block;
+}
+
+    </style>
     <!-- header-section - end
 		================================================== -->
 
@@ -668,6 +701,32 @@
 </script>
 <!-- Bootstrap Bundle includes Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll(".sidebar-menu-wrapper .menu-item-has-child > a");
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        // Prevent default if it has a submenu
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains("submenu")) {
+          e.preventDefault();
+
+          // Close other open submenus (optional)
+          document.querySelectorAll(".sidebar-menu-wrapper .menu-item-has-child").forEach(item => {
+            if (item !== this.parentElement) {
+              item.classList.remove("open");
+            }
+          });
+
+          // Toggle the clicked one
+          this.parentElement.classList.toggle("open");
+        }
+      });
+    });
+  });
+</script>
+
 
 	</body>
 </html>
