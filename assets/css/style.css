@@ -2903,7 +2903,7 @@ button {
 }
 
 .contact1-section {
-    background: url('https://realista.co.in/lighting-company/assets/images/about/Contact-banner01.webp') center center / cover no-repeat;
+    background: url('../images/brands/bri.webp') center center / cover no-repeat;
     height: 50vh;
     /* 50% of the viewport height */
     width: 100%;
@@ -2928,7 +2928,7 @@ button {
 
 @media (max-width: 768px) {
     .about1-section {
-        background: url('https://realista.co.in/lighting-company/assets/images/about/aboutus-banner-final.webp') center center / cover no-repeat;
+        background: url('../images/brands/bri.webp') center center / cover no-repeat;
         height: 30vh;
         /* 50% of the viewport height */
         width: 100%;
@@ -2939,7 +2939,7 @@ button {
         z-index: 1;
     }
     .contact1-section {
-        background: url('https://realista.co.in/lighting-company/assets/images/about/Contact-banner01.webp') center center / cover no-repeat;
+        background: url('../images/brands/bri.webp') center center / cover no-repeat;
         height: 30vh;
         /* 50% of the viewport height */
         width: 100%;
