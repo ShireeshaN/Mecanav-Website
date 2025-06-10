@@ -466,25 +466,76 @@
 }
 
 
-    @media screen and (max-width: 768px) {
-      .applications-wrapper {
-        flex-direction: column;
-      }
+   @media screen and (max-width: 768px) {
+  .applications-wrapper {
+    flex-direction: column;
+    padding: 0 20px 60px;
+  }
 
-      .app-nav {
-        position: static;
-        width: 100%;
-      }
+  .app-nav {
+    position: static;
+    width: 100%;
+    margin-bottom: 30px;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
 
-      .app-content {
-        padding-left: 0;
-      }
+  .app-nav ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
 
-      .projects-title {
-        font-size: 36px;
-        padding: 40px 20px 0;
-      }
-    }
+  .app-nav li {
+    flex: 0 0 auto;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-left: none;
+    border-radius: 20px;
+    background-color: #222;
+  }
+
+  .app-nav li.active {
+    background-color: #c26b4c;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .projects-title {
+    font-size: 32px;
+    padding: 30px 20px 10px;
+    text-align: center;
+  }
+
+  .app-content {
+    padding-left: 0;
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .section .heading {
+    font-size: 20px;
+    padding: 14px 20px;
+    margin-bottom: 15px;
+  }
+
+  .section img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .hover-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
   </style>
 
 <script>
